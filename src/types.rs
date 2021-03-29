@@ -3,7 +3,7 @@ pub enum ZzErrors {
     ParseConfigError(serde_json::Error),
     IllegalConfig(String),
     GetBaseDirError(std::io::Error),
-    IoError(String),
+    IoError(String)
 }
 
 #[derive(Deserialize, Debug)]
@@ -52,6 +52,7 @@ pub struct SyncConfig {
     pub buffer_size: u32,
 }
 
+#[derive(Debug)]
 pub struct SqlGroup {
     pub schema: String,
     pub sqls: Vec<String>,

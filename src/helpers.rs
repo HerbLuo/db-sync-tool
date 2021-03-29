@@ -4,6 +4,7 @@ use std::path::{Path, PathBuf};
 use std::fs;
 use std::fs::OpenOptions;
 use std::io::Write;
+use chrono::{Local, Datelike, Timelike};
 
 #[cfg(windows)]
 const LINE_ENDING: &'static str = "\r\n";
@@ -17,9 +18,19 @@ pub fn get_base_dir() -> Result<PathBuf, ZzErrors> {
 // 备份并清空（或创建）文件
 pub fn backup_file_and_clear_it(filepath: &Path) -> Result<(), ZzErrors> {
     if filepath.exists() {
-        // TODO 备份
+        let time = Local::now();
+        let bak_filepath = PathBuf::from(filepath).with_extension(
+            format!(
+                "{}-{}-{} {}:{}:{}.bak",
+                time.year(), time.month(), time.day(),
+                time.hour(), time.minute(), time.second()
+            )
+        );
+        fs::copy(filepath, &bak_filepath).map_err(|e| {
+            ZzErrors::IoError(format!("备份文件失败，err: {:?} from_path: {:?} to_path: {:?}", e, filepath, &bak_filepath))
+        })?;
 
-        OpenOptions::new().truncate(true).open(filepath).map_err(|e| {
+        OpenOptions::new().write(true).truncate(true).open(filepath).map_err(|e| {
             ZzErrors::IoError(format!("清空文件失败, err: {:?} path: {:?}", e, filepath))
         })?;
     }
@@ -27,11 +38,20 @@ pub fn backup_file_and_clear_it(filepath: &Path) -> Result<(), ZzErrors> {
 }
 
 pub async fn read_file_as_sql_group<T:  Future>(
-    _path: &String,
+    path: &String,
     _buffer_size: u32,
     _cb: fn(SqlGroups) -> T
-) {
+) -> Result<(), ZzErrors> {
+    let from_filepath = get_base_dir()?.join(path);
+    let dir = fs::read_dir(&from_filepath).map_err(|e| {
+        ZzErrors::IoError(format!("读取源文件夹失败，err: {:?}, path: {:?}", e, &from_filepath))
+    })?;
+    for file_enter_res in dir {
+        file_enter_res.map_err(|e| ZzErrors::IoError(format!("")))
+    }
+    println!("{:?}", dir);
 
+    Ok(())
 }
 
 // 保存SqlGroup到文件夹中
