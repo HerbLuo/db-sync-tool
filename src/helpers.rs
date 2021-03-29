@@ -1,10 +1,11 @@
-use crate::types::{SqlGroups, ZzErrors};
+use crate::types::{SqlGroups, ZzErrors, SqlGroup};
 use std::future::Future;
 use std::path::{Path, PathBuf};
 use std::fs;
-use std::fs::OpenOptions;
-use std::io::Write;
+use std::fs::{OpenOptions, File};
+use std::io::{Write, BufReader, BufRead};
 use chrono::{Local, Datelike, Timelike};
+use std::pin::Pin;
 
 #[cfg(windows)]
 const LINE_ENDING: &'static str = "\r\n";
@@ -37,20 +38,55 @@ pub fn backup_file_and_clear_it(filepath: &Path) -> Result<(), ZzErrors> {
     Ok(())
 }
 
-pub async fn read_file_as_sql_group<T:  Future>(
+pub async fn read_file_as_sql_group<F: Future>(
     path: &String,
-    _buffer_size: u32,
-    _cb: fn(SqlGroups) -> T
-) -> Result<(), ZzErrors> {
+    buffer_size: u32,
+    cb: fn(Box<SqlGroups>) -> Pin<Box<F>>
+) -> Result<(), ZzErrors>{
     let from_filepath = get_base_dir()?.join(path);
     let dir = fs::read_dir(&from_filepath).map_err(|e| {
         ZzErrors::IoError(format!("读取源文件夹失败，err: {:?}, path: {:?}", e, &from_filepath))
     })?;
+    let mut i = 0u32;
+    let mut sql_groups = vec![];
     for file_enter_res in dir {
-        file_enter_res.map_err(|e| ZzErrors::IoError(format!("")))
-    }
-    println!("{:?}", dir);
+        let dir_entry = &file_enter_res.map_err(|e| {
+            ZzErrors::IoError(format!("读取文件夹失败, err: {:?}, path: {:?}", e, &from_filepath))
+        })?;
+        if !dir_entry.file_type().map_err(|e| {
+            ZzErrors::IoError(format!("获取文件类型失败, err: {:?}, path: {:?}", e, &from_filepath))
+        })?.is_file() {
+            continue;
+        }
+        let sql_path = dir_entry.path();
+        if !&sql_path.extension().and_then(|ext| ext.to_str()).map(|ext| ext.to_lowercase() == "sql").unwrap_or(false) {
+            continue;
+        }
+        let sql_file = File::open(&sql_path).map_err(|e| {
+            ZzErrors::IoError(format!("读取方式打开文件失败, err: {:?}, path: {:?}", e, &sql_path))
+        })?;
+        println!("sql文件读取中 {:?}", sql_path);
+        let schema = sql_path.file_stem().and_then(|os| os.to_str()).ok_or_else(|| ZzErrors::IoError(format!("无法读取文件名{:?}", sql_path)))?;
+        let mut sql_group = SqlGroup { schema: schema.to_string(), sqls: vec![] };
+        for line_res in BufReader::new(sql_file).lines() {
+            let line = line_res.map_err(|e| {
+                ZzErrors::IoError(format!("按行读取文件失败, err: {:?}, path: {:?}", e, &sql_path))
+            })?;
+            &sql_group.sqls.push(line);
+            i = i + 1;
 
+            if i > buffer_size {
+                &sql_groups.push(sql_group);
+                cb(Box::new(sql_groups)).await;
+                i = 0;
+                sql_groups = vec![];
+                sql_group = SqlGroup { schema: schema.to_string(), sqls: vec![] };
+            }
+        }
+        sql_groups.push(sql_group);
+    }
+
+    cb(Box::new(sql_groups)).await;
     Ok(())
 }
 

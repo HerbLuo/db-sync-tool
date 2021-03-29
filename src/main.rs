@@ -14,7 +14,7 @@ fn read_config() -> Result<SyncConfig, ZzErrors> {
     serde_json::from_str(data).map_err(|e| ZzErrors::ParseConfigError(e))
 }
 
-fn sql_to_db(sql: SqlGroups) {
+async fn sql_to_db(sql: Box<SqlGroups>) {
     println!("{:?}", sql);
 }
 
@@ -27,14 +27,15 @@ async fn run_sync(config: SyncConfig) -> Result<(), ZzErrors> {
         if let DbConfig::Path(_) = config.to {
             return Err(ZzErrors::IllegalConfig("不支持sql to sql的模式".to_string()))
         }
-        async fn on_sql(sql: SqlGroups) {
-            sql_to_db(sql);
-        }
-        read_file_as_sql_group(&from_sql_path, config.buffer_size, on_sql).await?;
+        read_file_as_sql_group(
+            &from_sql_path,
+            config.buffer_size,
+            |sql|
+               Box::pin(sql_to_db(sql))
+        ).await?;
     } else if let DbConfig::ClientAddr(_addr) = config.from {
         db_to_sql();
         if let DbConfig::Path(to_dir) = config.to {
-
             let mut sync_started_schemas: Vec<String> = vec![];
 
             let sql_groups = vec![SqlGroup{
