@@ -49,6 +49,7 @@ pub async fn read_file_as_sql_group<F: Future>(
     })?;
     let mut i = 0u32;
     let mut sql_groups = vec![];
+    let mut promises = vec![];
     for file_enter_res in dir {
         let dir_entry = &file_enter_res.map_err(|e| {
             ZzErrors::IoError(format!("读取文件夹失败, err: {:?}, path: {:?}", e, &from_filepath))
@@ -77,7 +78,7 @@ pub async fn read_file_as_sql_group<F: Future>(
 
             if i > buffer_size {
                 &sql_groups.push(sql_group);
-                cb(Box::new(sql_groups)).await;
+                &promises.push(cb(Box::new(sql_groups)));
                 i = 0;
                 sql_groups = vec![];
                 sql_group = SqlGroup { schema: schema.to_string(), sqls: vec![] };
@@ -86,7 +87,8 @@ pub async fn read_file_as_sql_group<F: Future>(
         sql_groups.push(sql_group);
     }
 
-    cb(Box::new(sql_groups)).await;
+    promises.push(cb(Box::new(sql_groups)));
+    futures::future::join_all(promises).await;
     Ok(())
 }
 
