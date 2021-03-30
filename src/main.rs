@@ -4,12 +4,14 @@ extern crate serde;
 use crate::types::{SyncConfig, ZzErrors, DbConfig, SqlGroups, SqlGroup};
 use crate::helpers::{read_file_as_sql_group, save_sql_to_dir};
 use futures::executor::block_on;
+use mysql::Conn;
+use mysql::prelude::Queryable;
 
 mod types;
 mod helpers;
 
 fn read_config() -> Result<SyncConfig, ZzErrors> {
-    let data = r#"{"to":{"hostname":"127.0.0.1","username":"root","db":"words","password":"123456"},"from":"sql","tables":"*","mode":"drop-create"}"#;
+    let data = r#"{"from":{"hostname":"127.0.0.1","username":"root","db":"words","password":"123456"},"to":"sql","tables":"*","mode":"drop-create"}"#;
     // let data = r#"{"from":"sql","to":"sql","tables":"*","mode":"drop-create"}"#;
     serde_json::from_str(data).map_err(|e| ZzErrors::ParseConfigError(e))
 }
@@ -34,6 +36,12 @@ async fn run_sync(config: SyncConfig) -> Result<(), ZzErrors> {
                Box::pin(sql_to_db(sql))
         ).await?;
     } else if let DbConfig::ClientAddr(_addr) = config.from {
+        let mut conn = Conn::new("mysql://root:123456@127.0.0.1:3306/zz_trans")
+            .map_err(|e| {
+                ZzErrors::ConnectError(format!("{:?}", e))
+            })?;
+        let a = conn.query::<u32, _>("select 1");
+        println!("{:?}", a);
         db_to_sql();
         if let DbConfig::Path(to_dir) = config.to {
             let mut sync_started_schemas: Vec<String> = vec![];

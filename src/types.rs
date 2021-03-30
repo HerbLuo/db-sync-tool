@@ -3,7 +3,8 @@ pub enum ZzErrors {
     ParseConfigError(serde_json::Error),
     IllegalConfig(String),
     GetBaseDirError(std::io::Error),
-    IoError(String)
+    IoError(String),
+    ConnectError(String)
 }
 
 #[derive(Deserialize, Debug)]
