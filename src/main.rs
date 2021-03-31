@@ -1,17 +1,17 @@
 #[macro_use]
 extern crate serde;
 
-use crate::types::{SyncConfig, ZzErrors, DbConfig, SqlGroups, SqlGroup};
+use crate::types::{SyncConfig, ZzErrors, DbConfig, SqlGroups, SqlGroup, ClientAddr};
 use crate::helpers::{read_file_as_sql_group, save_sql_to_dir};
 use futures::executor::block_on;
-use mysql::Conn;
+use mysql::{Conn, OptsBuilder};
 use mysql::prelude::Queryable;
 
 mod types;
 mod helpers;
 
 fn read_config() -> Result<SyncConfig, ZzErrors> {
-    let data = r#"{"from":{"hostname":"127.0.0.1","username":"root","db":"words","password":"123456"},"to":"sql","tables":"*","mode":"drop-create"}"#;
+    let data = r#"{"from":{"hostname":"127.0.0.1","username":"root","db":"zz_trans","password":"123456","port":3306},"to":"sql","tables":"*","mode":"drop-create"}"#;
     // let data = r#"{"from":"sql","to":"sql","tables":"*","mode":"drop-create"}"#;
     serde_json::from_str(data).map_err(|e| ZzErrors::ParseConfigError(e))
 }
@@ -22,6 +22,19 @@ async fn sql_to_db(sql: Box<SqlGroups>) {
 
 fn db_to_sql() {
 
+}
+
+fn establish_connection(addr: &ClientAddr) -> Result<Conn, ZzErrors> {
+    let opts = OptsBuilder::new()
+        .ip_or_hostname(Some(&addr.hostname))
+        .user(Some(&addr.username))
+        .pass(Some(&addr.password))
+        .tcp_port(addr.port)
+        .db_name(Some(&addr.db));
+    return Conn::new(opts)
+        .map_err(|e| {
+            ZzErrors::ConnectError(format!("无法链接数据库: err: {:?}, addr: {:?}", e, addr))
+        });
 }
 
 async fn run_sync(config: SyncConfig) -> Result<(), ZzErrors> {
@@ -35,11 +48,8 @@ async fn run_sync(config: SyncConfig) -> Result<(), ZzErrors> {
             |sql|
                Box::pin(sql_to_db(sql))
         ).await?;
-    } else if let DbConfig::ClientAddr(_addr) = config.from {
-        let mut conn = Conn::new("mysql://root:123456@127.0.0.1:3306/zz_trans")
-            .map_err(|e| {
-                ZzErrors::ConnectError(format!("{:?}", e))
-            })?;
+    } else if let DbConfig::ClientAddr(addr) = config.from {
+        let mut conn = establish_connection(&addr)?;
         let a = conn.query::<u32, _>("select 1");
         println!("{:?}", a);
         db_to_sql();

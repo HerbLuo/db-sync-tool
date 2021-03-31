@@ -31,6 +31,7 @@ pub struct ClientAddr {
     pub hostname: String,
     pub username: String,
     pub db: String,
+    pub port: u16,
     pub password: String,
 }
 

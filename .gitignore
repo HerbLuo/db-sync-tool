@@ -2,3 +2,4 @@
 .idea
 *.iml
 /sql
+.DS_Store
