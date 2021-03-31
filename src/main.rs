@@ -6,9 +6,11 @@ use crate::helpers::{read_file_as_sql_group, save_sql_to_dir};
 use futures::executor::block_on;
 use mysql::{Conn, OptsBuilder};
 use mysql::prelude::Queryable;
+use crate::ui::start_tray;
 
 mod types;
 mod helpers;
+mod ui;
 
 fn read_config() -> Result<SyncConfig, ZzErrors> {
     let data = r#"{"from":{"hostname":"127.0.0.1","username":"root","db":"zz_trans","password":"123456","port":3306},"to":"sql","tables":"*","mode":"drop-create"}"#;
@@ -73,4 +75,5 @@ fn main() {
     println!("{:?}", config);
     let sync_res = block_on(run_sync(config));
     println!("{:?}", sync_res);
+    start_tray();
 }
