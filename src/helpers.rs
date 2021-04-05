@@ -1,4 +1,4 @@
-use crate::types::{SqlGroups, ZzErrors, SqlGroup};
+use crate::types::{SqlGroup, SqlGroups, SyncConfigTables, ZzErrors};
 use std::future::Future;
 use std::path::{Path, PathBuf};
 use std::fs;
@@ -6,6 +6,8 @@ use std::fs::{OpenOptions, File};
 use std::io::{Write, BufReader, BufRead};
 use chrono::{Local, Datelike, Timelike};
 use std::pin::Pin;
+use crate::db_conn::DBConn;
+use std::rc::Rc;
 
 #[cfg(windows)]
 const LINE_ENDING: &'static str = "\r\n";
@@ -41,7 +43,7 @@ pub fn backup_file_and_clear_it(filepath: &Path) -> Result<(), ZzErrors> {
 pub async fn read_file_as_sql_group<F: Future>(
     path: &String,
     buffer_size: u32,
-    cb: fn(Box<SqlGroups>) -> Pin<Box<F>>
+    cb: impl Fn(Box<SqlGroups>) -> Pin<Box<F>>
 ) -> Result<(), ZzErrors>{
     let from_filepath = get_base_dir()?.join(path);
     let dir = fs::read_dir(&from_filepath).map_err(|e| {
@@ -125,5 +127,29 @@ pub fn save_sql_to_dir(
                 ZzErrors::IoError(format!("追加模式打开文件失败，err: {:?}, path: {:?}", e, to_sql_filepath))
             })?;
     }
+    Ok(())
+}
+
+const SQL_SELECT_ALL_TABLE: &'static str = 
+    "SELECT TABLE_NAME FROM information_schema.TABLES WHERE table_type = 'BASE TABLE' AND table_schema = DATABASE()";
+
+pub async fn db_to_sql_group<F: Future>(
+    conn: &impl DBConn,
+    tables_config: &SyncConfigTables,
+    buffer_size: u32,
+    cb: fn(Box<SqlGroups>) -> Pin<Box<F>>
+) -> Result<(), ZzErrors> {
+    fn read_for_table() {
+
+    }
+    
+    let tables = if let SyncConfigTables::Any(_) = tables_config {
+        conn.query::<_, String>(SQL_SELECT_ALL_TABLE)?.iter()
+    } else if let SyncConfigTables::Tables(tables) = tables_config {
+        tables.iter()
+    } else {
+        panic!("未知的config.table");
+    };
+
     Ok(())
 }

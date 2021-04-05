@@ -4,7 +4,8 @@ pub enum ZzErrors {
     IllegalConfig(String),
     GetBaseDirError(std::io::Error),
     IoError(String),
-    ConnectError(String)
+    ConnectError(String),
+    ExecSqlError(String),
 }
 
 #[derive(Deserialize, Debug)]
