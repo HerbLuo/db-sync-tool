@@ -7,7 +7,7 @@ use std::io::{Write, BufReader, BufRead};
 use chrono::{Local, Datelike, Timelike};
 use std::pin::Pin;
 use crate::db_conn::DBConn;
-use std::rc::Rc;
+use mysql::Row;
 
 #[cfg(windows)]
 const LINE_ENDING: &'static str = "\r\n";
@@ -139,14 +139,28 @@ pub async fn db_to_sql_group<F: Future>(
     buffer_size: u32,
     cb: fn(Box<SqlGroups>) -> Pin<Box<F>>
 ) -> Result<(), ZzErrors> {
-    fn read_for_table() {
+    let read_tables = |tables: &Vec<String>| -> Result<(), ZzErrors> {
+        // let mut sql_groups = vec![];
+        for table in tables {
+            let mut i = 0;
+            loop {
+                let sql = format!("SELECT * FROM {} LIMIT {}, {}", table, i * buffer_size, buffer_size);
+                let rows = conn.query::<_, Row>(sql)?;
+                println!("{:?}", rows.len());
 
-    }
+                if rows.len() < 1000  {
+                    break;
+                }
+                i = i + 1;
+            }
+        }
+        Ok(())
+    };
     
-    let tables = if let SyncConfigTables::Any(_) = tables_config {
-        conn.query::<_, String>(SQL_SELECT_ALL_TABLE)?.iter()
+    if let SyncConfigTables::Any(_) = tables_config {
+        read_tables(&conn.query::<_, String>(SQL_SELECT_ALL_TABLE)?)?
     } else if let SyncConfigTables::Tables(tables) = tables_config {
-        tables.iter()
+        read_tables(tables)?
     } else {
         panic!("未知的config.table");
     };

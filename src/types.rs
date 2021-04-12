@@ -43,7 +43,7 @@ pub enum DbConfig {
     ClientAddr(ClientAddr)
 }
 
-fn default_buffer_size() -> u32 { 104 }
+fn default_buffer_size() -> u32 { 1024 }
 
 #[derive(Deserialize, Debug)]
 pub struct SyncConfig {
