@@ -54,6 +54,7 @@ async fn run_sync(config: SyncConfig) -> Result<(), ZzErrors> {
             &config.tables, 
             config.buffer_size, 
             |sql_group| {
+                println!("{:?}", *sql_group);
                 Box::pin(async {})
             }
         ).await?;

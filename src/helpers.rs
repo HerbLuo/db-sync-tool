@@ -139,21 +139,34 @@ pub async fn db_to_sql_group<F: Future>(
     buffer_size: u32,
     cb: fn(Box<SqlGroups>) -> Pin<Box<F>>
 ) -> Result<(), ZzErrors> {
-    let read_tables = |tables: &Vec<String>| -> Result<(), ZzErrors> {
-        // let mut sql_groups = vec![];
-        for table in tables {
-            let mut i = 0;
-            loop {
-                let sql = format!("SELECT * FROM {} LIMIT {}, {}", table, i * buffer_size, buffer_size);
-                let rows = conn.query::<_, Row>(sql)?;
-                println!("{:?}", rows.len());
+    let mut promises = vec![];
 
+    let mut read_tables = |tables: &Vec<String>| -> Result<(), ZzErrors> {
+        let mut sql_groups = vec![];
+        let mut row_size = 0usize;
+        for schema in tables {
+            let mut page = 0;
+            let mut sql_group = SqlGroup { schema: schema.to_string(), sqls: vec![] };
+            loop {
+                let sql = format!("SELECT * FROM {} LIMIT {}, {}", schema, page * buffer_size, buffer_size);
+                let rows = conn.query::<_, Row>(sql)?;
+
+                row_size = row_size + rows.len();
+                if row_size > (buffer_size as usize) {
+                    &sql_groups.push(sql_group);
+                    promises.push(cb(Box::new(sql_groups)));
+                    row_size = 0;
+                    sql_groups = vec![];
+                    sql_group = SqlGroup { schema: schema.to_string(), sqls: vec![] };
+                }
                 if rows.len() < 1000  {
                     break;
                 }
-                i = i + 1;
+                page = page + 1;
             }
+            sql_groups.push(sql_group);
         }
+        promises.push(cb(Box::new(sql_groups)));
         Ok(())
     };
     
@@ -164,6 +177,8 @@ pub async fn db_to_sql_group<F: Future>(
     } else {
         panic!("未知的config.table");
     };
+
+    futures::future::join_all(promises).await;
 
     Ok(())
 }
