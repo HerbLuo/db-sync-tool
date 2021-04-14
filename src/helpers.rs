@@ -8,6 +8,7 @@ use chrono::{Local, Datelike, Timelike};
 use std::pin::Pin;
 use crate::db_conn::DBConn;
 use mysql::Row;
+use mysql::Value;
 
 #[cfg(windows)]
 const LINE_ENDING: &'static str = "\r\n";
@@ -150,16 +151,44 @@ pub async fn db_to_sql_group<F: Future>(
             loop {
                 let sql = format!("SELECT * FROM {} LIMIT {}, {}", schema, page * buffer_size, buffer_size);
                 let rows = conn.query::<_, Row>(sql)?;
+                let cur_rows_len = rows.len();
 
-                row_size = row_size + rows.len();
-                if row_size > (buffer_size as usize) {
+                for row in rows {
+                    let mut sql = String::new();
+                    sql.push_str("INSERT INTO ");
+                    sql.push_str(schema);
+                    sql.push('(');
+                    let cols = row.columns_ref();
+                    let last_index_of_cols = cols.len() - 1;
+                    for (i, col) in cols.iter().enumerate() {
+                        sql.push('`');
+                        sql.push_str(&col.name_str());
+                        sql.push('`');
+                        if i != last_index_of_cols {
+                            sql.push_str(", ");
+                        } 
+                    }
+                    sql.push_str(") VALUES (");
+                    for (i, val) in row.unwrap().iter().enumerate() {
+                        sql.push_str(&val.as_sql(false));
+                        if i != last_index_of_cols {
+                            sql.push_str(", ");
+                        } 
+                    }
+                    sql.push_str(");");
+                    &sql_group.sqls.push(sql);
+                    break;
+                }
+
+                row_size = row_size + cur_rows_len;
+                if row_size >= (buffer_size as usize) {
                     &sql_groups.push(sql_group);
                     promises.push(cb(Box::new(sql_groups)));
                     row_size = 0;
                     sql_groups = vec![];
                     sql_group = SqlGroup { schema: schema.to_string(), sqls: vec![] };
                 }
-                if rows.len() < 1000  {
+                if cur_rows_len < 1000  {
                     break;
                 }
                 page = page + 1;
