@@ -43,7 +43,6 @@ impl DBConn for MysqlConn {
 
     fn query<S: AsRef<str>, R: FromRow>(&self, sql: S) -> Result<Vec<R>, ZzErrors> {
         let mut conn = self.conn.lock().unwrap();
-        println!("{}", sql.as_ref());
         (*conn).query(sql).map_err(|e| {
             ZzErrors::ExecSqlError(format!("执行sql遇到了一个错误 {:?}", e))
         })

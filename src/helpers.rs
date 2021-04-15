@@ -7,8 +7,7 @@ use std::io::{Write, BufReader, BufRead};
 use chrono::{Local, Datelike, Timelike};
 use std::pin::Pin;
 use crate::db_conn::DBConn;
-use mysql::Row;
-use mysql::Value;
+use mysql::{Row, Value, from_value, consts::ColumnType};
 
 #[cfg(windows)]
 const LINE_ENDING: &'static str = "\r\n";
@@ -134,11 +133,12 @@ pub fn save_sql_to_dir(
 const SQL_SELECT_ALL_TABLE: &'static str = 
     "SELECT TABLE_NAME FROM information_schema.TABLES WHERE table_type = 'BASE TABLE' AND table_schema = DATABASE()";
 
-pub async fn db_to_sql_group<F: Future>(
+pub async fn db_to_sql_group<F: Future<Output = Result<(), ZzErrors>>, P>(
     conn: &impl DBConn,
     tables_config: &SyncConfigTables,
     buffer_size: u32,
-    cb: fn(Box<SqlGroups>) -> Pin<Box<F>>
+    payload: P,
+    cb: fn(Box<SqlGroups>, Box<&P>) -> Pin<Box<F>>
 ) -> Result<(), ZzErrors> {
     let mut promises = vec![];
 
@@ -160,7 +160,9 @@ pub async fn db_to_sql_group<F: Future>(
                     sql.push('(');
                     let cols = row.columns_ref();
                     let last_index_of_cols = cols.len() - 1;
+                    let mut column_types = vec![];
                     for (i, col) in cols.iter().enumerate() {
+                        column_types.push(col.column_type());
                         sql.push('`');
                         sql.push_str(&col.name_str());
                         sql.push('`');
@@ -170,20 +172,31 @@ pub async fn db_to_sql_group<F: Future>(
                     }
                     sql.push_str(") VALUES (");
                     for (i, val) in row.unwrap().iter().enumerate() {
-                        sql.push_str(&val.as_sql(false));
+                        let column_type = column_types[i];
+                        let value_str = if val == &Value::NULL {
+                            String::from("NULL")
+                        } else {
+                            let val_owned = val.to_owned();
+                            match column_type {
+                                ColumnType::MYSQL_TYPE_LONGLONG => from_value::<i128>(val_owned).to_string(),
+                                ColumnType::MYSQL_TYPE_TINY => from_value::<i16>(val_owned).to_string(),
+                                ColumnType::MYSQL_TYPE_NEWDECIMAL => from_value::<String>(val_owned),
+                                _ => val_owned.as_sql(false),
+                            }
+                        };
+                        sql.push_str(&value_str);
                         if i != last_index_of_cols {
                             sql.push_str(", ");
                         } 
                     }
                     sql.push_str(");");
                     &sql_group.sqls.push(sql);
-                    break;
                 }
 
                 row_size = row_size + cur_rows_len;
                 if row_size >= (buffer_size as usize) {
                     &sql_groups.push(sql_group);
-                    promises.push(cb(Box::new(sql_groups)));
+                    promises.push(cb(Box::new(sql_groups), Box::new(&payload)));
                     row_size = 0;
                     sql_groups = vec![];
                     sql_group = SqlGroup { schema: schema.to_string(), sqls: vec![] };
@@ -195,7 +208,7 @@ pub async fn db_to_sql_group<F: Future>(
             }
             sql_groups.push(sql_group);
         }
-        promises.push(cb(Box::new(sql_groups)));
+        promises.push(cb(Box::new(sql_groups), Box::new(&payload)));
         Ok(())
     };
     
@@ -207,7 +220,10 @@ pub async fn db_to_sql_group<F: Future>(
         panic!("未知的config.table");
     };
 
-    futures::future::join_all(promises).await;
+    let res_vec = futures::future::join_all(promises).await;
+    for res in res_vec {
+        res?;
+    }
 
     Ok(())
 }

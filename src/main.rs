@@ -8,6 +8,7 @@ use helpers::db_to_sql_group;
 use crate::ui::start_tray;
 use crate::db_conn::DBConn;
 use crate::db_conn::mysql_conn::MysqlConn;
+use std::sync::Mutex;
 
 mod db_conn;
 mod types;
@@ -49,27 +50,38 @@ async fn run_sync(config: SyncConfig) -> Result<(), ZzErrors> {
             ).await?;
         }
     } else if let DbConfig::ClientAddr(addr) = &config.from {
+        let sync_started_schemas: Mutex<Vec<String>> = Mutex::new(vec![]);
         db_to_sql_group(
             &MysqlConn::new(addr)?, 
             &config.tables, 
             config.buffer_size, 
-            |sql_group| {
-                println!("{:?}", *sql_group);
-                Box::pin(async {})
-            }
+            (config.to, sync_started_schemas),
+            |sql_group: Box<Vec<SqlGroup>>, payload| {
+                let (db_config, sync_started_schemas) = *payload;
+                let res = if let DbConfig::Path(to_dir) = db_config {
+                    save_sql_to_dir( 
+                        &mut *sync_started_schemas.lock().unwrap(), 
+                        &*sql_group, 
+                        &to_dir
+                    )
+                } else {
+                    Ok(())
+                };
+                Box::pin(async { res })
+            },
         ).await?;
-        if let DbConfig::Path(to_dir) = config.to {
-            let mut sync_started_schemas: Vec<String> = vec![];
+        // if let DbConfig::Path(to_dir) = config.to {
+        //     let mut sync_started_schemas: Vec<String> = vec![];
 
-            let sql_groups = vec![SqlGroup{
-                schema: "test".to_string(),
-                sqls: vec!["select 1;".to_string()]
-            }];
-            save_sql_to_dir(&mut sync_started_schemas, &sql_groups, &to_dir)?;
-            save_sql_to_dir(&mut sync_started_schemas, &sql_groups, &to_dir)?;
-        } else if let DbConfig::ClientAddr(_to_db_conn) = config.to {
-            // sql_to_db()
-        }
+        //     let sql_groups = vec![SqlGroup{
+        //         schema: "test".to_string(),
+        //         sqls: vec!["select 1;".to_string()]
+        //     }];
+        //     save_sql_to_dir(&mut sync_started_schemas, &sql_groups, &to_dir)?;
+        //     save_sql_to_dir(&mut sync_started_schemas, &sql_groups, &to_dir)?;
+        // } else if let DbConfig::ClientAddr(_to_db_conn) = config.to {
+        //     // sql_to_db()
+        // }
     }
 
     Ok(())
