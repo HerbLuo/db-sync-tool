@@ -40,10 +40,10 @@ pub fn backup_file_and_clear_it(filepath: &Path) -> Result<(), ZzErrors> {
     Ok(())
 }
 
-pub async fn read_file_as_sql_group<F: Future>(
+pub async fn read_file_as_sql_group<F: Future<Output = Result<(), ZzErrors>>>(
     path: &String,
     buffer_size: u32,
-    cb: impl Fn(Box<SqlGroups>) -> Pin<Box<F>>
+    cb: impl Fn(SqlGroups) -> Pin<Box<F>>
 ) -> Result<(), ZzErrors>{
     let from_filepath = get_base_dir()?.join(path);
     let dir = fs::read_dir(&from_filepath).map_err(|e| {
@@ -80,7 +80,7 @@ pub async fn read_file_as_sql_group<F: Future>(
 
             if i > buffer_size {
                 &sql_groups.push(sql_group);
-                &promises.push(cb(Box::new(sql_groups)));
+                &promises.push(cb(sql_groups));
                 i = 0;
                 sql_groups = vec![];
                 sql_group = SqlGroup { schema: schema.to_string(), sqls: vec![] };
@@ -89,7 +89,7 @@ pub async fn read_file_as_sql_group<F: Future>(
         sql_groups.push(sql_group);
     }
 
-    promises.push(cb(Box::new(sql_groups)));
+    promises.push(cb(sql_groups));
     futures::future::join_all(promises).await;
     Ok(())
 }
@@ -133,12 +133,21 @@ pub fn save_sql_to_dir(
 const SQL_SELECT_ALL_TABLE: &'static str = 
     "SELECT TABLE_NAME FROM information_schema.TABLES WHERE table_type = 'BASE TABLE' AND table_schema = DATABASE()";
 
-pub async fn db_to_sql_group<F: Future<Output = Result<(), ZzErrors>>, P>(
+pub async fn sql_to_db(conn: &impl DBConn, sql_groups: SqlGroups) -> Result<(), ZzErrors> {
+    for sql_group in sql_groups {
+        conn.exec(format!("TRUNCATE table `{}`", sql_group.schema))?;
+        for sql in sql_group.sqls {
+            conn.exec(sql)?;
+        }
+    }
+    Ok(())
+}
+
+pub async fn db_to_sql_group<F: Future<Output = Result<(), ZzErrors>>>(
     conn: &impl DBConn,
     tables_config: &SyncConfigTables,
     buffer_size: u32,
-    payload: P,
-    cb: fn(Box<SqlGroups>, Box<&P>) -> Pin<Box<F>>
+    cb: impl Fn(SqlGroups) -> Pin<Box<F>>
 ) -> Result<(), ZzErrors> {
     let mut promises = vec![];
 
@@ -196,7 +205,7 @@ pub async fn db_to_sql_group<F: Future<Output = Result<(), ZzErrors>>, P>(
                 row_size = row_size + cur_rows_len;
                 if row_size >= (buffer_size as usize) {
                     &sql_groups.push(sql_group);
-                    promises.push(cb(Box::new(sql_groups), Box::new(&payload)));
+                    promises.push(cb(sql_groups));
                     row_size = 0;
                     sql_groups = vec![];
                     sql_group = SqlGroup { schema: schema.to_string(), sqls: vec![] };
@@ -208,7 +217,7 @@ pub async fn db_to_sql_group<F: Future<Output = Result<(), ZzErrors>>, P>(
             }
             sql_groups.push(sql_group);
         }
-        promises.push(cb(Box::new(sql_groups), Box::new(&payload)));
+        promises.push(cb(sql_groups));
         Ok(())
     };
     
