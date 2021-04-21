@@ -20,7 +20,8 @@ fn read_config() -> Result<SyncConfig, ZzErrors> {
         "from":{"hostname":"127.0.0.1","username":"root","db":"zz_trans","password":"123456","port":3306},
         "to":{"hostname":"127.0.0.1","username":"root","db":"words","password":"123456","port":3306},
         "tables":"*",
-        "mode":"drop-create"
+        "mode":"drop-create",
+        "skip_if_table_not_exist":true
     }"#;
     serde_json::from_str(data).map_err(|e| ZzErrors::ParseConfigError(e))
 }
