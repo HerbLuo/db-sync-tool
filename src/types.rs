@@ -44,6 +44,7 @@ pub enum DbConfig {
 }
 
 fn default_buffer_size() -> u32 { 1024 }
+fn default_skip_sync_if_table_not_exist() -> bool { true }
 
 #[derive(Deserialize, Debug)]
 pub struct SyncConfig {
@@ -53,7 +54,8 @@ pub struct SyncConfig {
     pub to: DbConfig,
     #[serde(default = "default_buffer_size")]
     pub buffer_size: u32,
-    pub skip_if_table_not_exist: bool,
+    #[serde(default = "default_skip_sync_if_table_not_exist")]
+    pub skip_sync_if_table_not_exist: bool,
     // pub transactional: bool,
 }
 

@@ -1,4 +1,4 @@
-use crate::types::{SqlGroup, SqlGroups, SyncConfigTables, ZzErrors};
+use crate::types::{SqlGroup, SqlGroups, SyncConfig, SyncConfigTables, ZzErrors};
 use std::future::Future;
 use std::path::{Path, PathBuf};
 use std::fs;
@@ -144,8 +144,9 @@ pub async fn sql_to_db(conn: &impl DBConn, sql_groups: SqlGroups) -> Result<(), 
 }
 
 pub async fn db_to_sql_group<F: Future<Output = Result<(), ZzErrors>>>(
-    conn: &impl DBConn,
-    tables_config: &SyncConfigTables,
+    source_db_conn: &impl DBConn,
+    target_db_conn_opt: Option<&impl DBConn>,
+    config: &SyncConfig,
     buffer_size: u32,
     cb: impl Fn(SqlGroups) -> Pin<Box<F>>
 ) -> Result<(), ZzErrors> {
@@ -159,7 +160,7 @@ pub async fn db_to_sql_group<F: Future<Output = Result<(), ZzErrors>>>(
             let mut sql_group = SqlGroup { schema: schema.to_string(), sqls: vec![] };
             loop {
                 let sql = format!("SELECT * FROM {} LIMIT {}, {}", schema, page * buffer_size, buffer_size);
-                let rows = conn.query::<_, Row>(sql)?;
+                let rows = source_db_conn.query::<_, Row>(sql)?;
                 let cur_rows_len = rows.len();
 
                 for row in rows {
@@ -221,9 +222,21 @@ pub async fn db_to_sql_group<F: Future<Output = Result<(), ZzErrors>>>(
         Ok(())
     };
     
-    if let SyncConfigTables::Any(_) = tables_config {
-        read_tables(&conn.query::<_, String>(SQL_SELECT_ALL_TABLE)?)?
-    } else if let SyncConfigTables::Tables(tables) = tables_config {
+    if let SyncConfigTables::Any(_) = &config.tables {
+        let source_db_tables = source_db_conn.query::<_, String>(SQL_SELECT_ALL_TABLE)?;
+        let tables = if !config.skip_sync_if_table_not_exist {
+            source_db_tables
+        } else if let Some(target_db_conn) = target_db_conn_opt {
+            let target_db_tables = target_db_conn.query::<_, String>(SQL_SELECT_ALL_TABLE)?;
+            let common_tables = source_db_tables.into_iter()
+                .filter(|t| target_db_tables.contains(t))
+                .collect::<Vec<_>>();
+            common_tables    
+        } else {
+            source_db_tables
+        };
+        read_tables(&tables)?;
+    } else if let SyncConfigTables::Tables(tables) = &config.tables {
         read_tables(tables)?
     } else {
         panic!("未知的config.table");

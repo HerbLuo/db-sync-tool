@@ -38,12 +38,13 @@ async fn run_sync(config: SyncConfig) -> Result<(), ZzErrors> {
                 |sql_groups| Box::pin(sql_to_db(&conn, sql_groups))
             ).await?;
         }
-    } else if let DbConfig::ClientAddr(addr) = &config.from {
+    } else if let DbConfig::ClientAddr(from_db_addr) = &config.from {
         if let DbConfig::Path(to_dir) = &config.to {
             let sync_started_schemas: Mutex<Vec<String>> = Mutex::new(vec![]);
             db_to_sql_group(
-                &MysqlConn::new(addr)?, 
-                &config.tables, 
+                &MysqlConn::new(from_db_addr)?, 
+                Option::<&MysqlConn>::None,
+                &config, 
                 config.buffer_size, 
                 |sql_group| {
                     let res = save_sql_to_dir(
@@ -57,8 +58,9 @@ async fn run_sync(config: SyncConfig) -> Result<(), ZzErrors> {
         } else if let DbConfig::ClientAddr(to_db_addr) = &config.to {
             let to_db_conn = MysqlConn::new(to_db_addr)?;
             db_to_sql_group(
-                &MysqlConn::new(addr)?, 
-                &config.tables, 
+                &MysqlConn::new(from_db_addr)?, 
+                Some(&to_db_conn),
+                &config, 
                 config.buffer_size, 
                 |sql_group| Box::pin(sql_to_db(&to_db_conn, sql_group)),
             ).await?;
