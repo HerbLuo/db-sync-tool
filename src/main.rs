@@ -3,25 +3,26 @@ extern crate serde;
 
 use crate::types::{SyncConfig, ZzErrors, DbConfig};
 use crate::helpers::{read_file_as_sql_group, save_sql_to_dir};
-use futures::executor::block_on;
+use futures::executor::{block_on};
 use helpers::{db_to_sql_group, sql_to_db};
+use static_server::static_serve;
+use std::sync::Mutex;
 use crate::ui::start_tray;
 use crate::db_conn::DBConn;
 use crate::db_conn::mysql_conn::MysqlConn;
-use std::sync::Mutex;
 
 mod db_conn;
 mod types;
 mod helpers;
 mod ui;
+mod static_server;
 
 fn read_config() -> Result<SyncConfig, ZzErrors> {
     let data = r#"{
         "from":{"hostname":"127.0.0.1","username":"root","db":"zz_trans","password":"123456","port":3306},
         "to":{"hostname":"127.0.0.1","username":"root","db":"words","password":"123456","port":3306},
         "tables":"*",
-        "mode":"drop-create",
-        "skip_if_table_not_exist":true
+        "mode":"drop-create"
     }"#;
     serde_json::from_str(data).map_err(|e| ZzErrors::ParseConfigError(e))
 }
@@ -70,10 +71,13 @@ async fn run_sync(config: SyncConfig) -> Result<(), ZzErrors> {
     Ok(())
 }
 
-fn main() {
-    let config = read_config().unwrap();
-    println!("{:?}", config);
-    let sync_res = block_on(run_sync(config));
-    println!("{:?}", sync_res);
+#[tokio::main]
+async fn main() {
+    // let config = read_config().unwrap();
+    // println!("{:?}", config);
+    // let sync_res = block_on(run_sync(config));
+    // println!("{:?}", sync_res);
+
+    tokio::spawn(static_serve());
     start_tray();
 }
