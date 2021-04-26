@@ -17,7 +17,7 @@ pub fn start_tray() {
 pub fn start_tray() {
     let mut tray = TrayItem::new("数据库同步工具", "").unwrap();
     tray.add_menu_item("打开主界面", || {
-        webbrowser::open("http://localhost:3300").unwrap();
+        webbrowser::open("http://localhost:8000").unwrap();
     }).unwrap();
     let inner = tray.inner_mut();
     inner.add_quit_item("退出");

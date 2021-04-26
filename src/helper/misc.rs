@@ -1,4 +1,5 @@
-use crate::types::{SqlGroup, SqlGroups, SyncConfig, SyncConfigTables, ZzErrors};
+use crate::types::{SqlGroup, SqlGroups, SyncConfig, SyncConfigTables, ZzErrors, DbConfig};
+use crate::db_conn::{DBConn, mysql_conn::MysqlConn};
 use std::future::Future;
 use std::path::{Path, PathBuf};
 use std::fs;
@@ -6,8 +7,8 @@ use std::fs::{OpenOptions, File};
 use std::io::{Write, BufReader, BufRead};
 use chrono::{Local, Datelike, Timelike};
 use std::pin::Pin;
-use crate::db_conn::DBConn;
 use mysql::{Row, Value, from_value, consts::ColumnType};
+use std::sync::Mutex;
 
 #[cfg(windows)]
 const LINE_ENDING: &'static str = "\r\n";
@@ -249,3 +250,48 @@ pub async fn db_to_sql_group<F: Future<Output = Result<(), ZzErrors>>>(
 
     Ok(())
 }
+
+pub async fn run_sync(config: SyncConfig) -> Result<(), ZzErrors> {
+    if let DbConfig::Path(from_sql_path) = &config.from {
+        if let DbConfig::Path(_) = &config.to {
+            return Err(ZzErrors::IllegalConfig("不支持sql to sql的模式".to_string()))
+        } else if let DbConfig::ClientAddr(addr) = &config.to {
+            let conn = MysqlConn::new(addr)?;
+            read_file_as_sql_group(
+                &from_sql_path,
+                config.buffer_size,
+                |sql_groups| Box::pin(sql_to_db(&conn, sql_groups))
+            ).await?;
+        }
+    } else if let DbConfig::ClientAddr(from_db_addr) = &config.from {
+        if let DbConfig::Path(to_dir) = &config.to {
+            let sync_started_schemas: Mutex<Vec<String>> = Mutex::new(vec![]);
+            db_to_sql_group(
+                &MysqlConn::new(from_db_addr)?, 
+                Option::<&MysqlConn>::None,
+                &config, 
+                config.buffer_size, 
+                |sql_group| {
+                    let res = save_sql_to_dir(
+                        &mut sync_started_schemas.lock().unwrap(), 
+                        &sql_group, 
+                        to_dir
+                    );
+                    Box::pin(async {res})
+                },
+            ).await?;
+        } else if let DbConfig::ClientAddr(to_db_addr) = &config.to {
+            let to_db_conn = MysqlConn::new(to_db_addr)?;
+            db_to_sql_group(
+                &MysqlConn::new(from_db_addr)?, 
+                Some(&to_db_conn),
+                &config, 
+                config.buffer_size, 
+                |sql_group| Box::pin(sql_to_db(&to_db_conn, sql_group)),
+            ).await?;
+        };
+    }
+
+    Ok(())
+}
+

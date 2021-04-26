@@ -1,0 +1,195 @@
+INFO 2021-04-26T21:52:07.278837+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-04-26T21:52:07.279177+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-04-26T21:52:07.279213+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-04-26T21:52:07.279246+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-04-26T21:52:07.279290+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-04-26T21:52:07.279323+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-04-26T21:52:07.279355+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-04-26T21:52:07.279388+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-04-26T21:52:07.279420+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-04-26T21:52:07.279453+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-04-26T21:52:07.279484+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-04-26T21:52:07.279650+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-04-26T21:52:07.280042+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:52:07.280111+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:52:07.280164+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-04-26T21:52:07.280223+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-04-26T21:52:07.281387+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-04-26T21:53:37.250281+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-04-26T21:53:37.250750+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-04-26T21:53:37.250795+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-04-26T21:53:37.250847+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-04-26T21:53:37.250885+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-04-26T21:53:37.250922+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-04-26T21:53:37.250959+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-04-26T21:53:37.250998+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-04-26T21:53:37.251037+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-04-26T21:53:37.251074+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-04-26T21:53:37.251123+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-04-26T21:53:37.251280+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-04-26T21:53:37.251861+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:53:37.252016+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:53:37.252134+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-04-26T21:53:37.252275+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-04-26T21:53:37.253398+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-04-26T21:54:11.578476+08:00 rocket::rocket 208 - [32mGET[0m [34m/[0m [33mtext/html[0m:
+INFO 2021-04-26T21:54:11.579212+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:54:11.579499+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-04-26T21:54:11.580700+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-04-26T21:54:11.661227+08:00 rocket::rocket 208 - [32mGET[0m [34m/static/css/main.31c5b48e.chunk.css[0m [33mtext/css[0m:
+INFO 2021-04-26T21:54:11.661578+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:54:11.661909+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-04-26T21:54:11.662912+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-04-26T21:54:11.689751+08:00 rocket::rocket 208 - [32mGET[0m [34m/static/js/main.3c8c066e.chunk.js[0m:
+INFO 2021-04-26T21:54:11.689955+08:00 rocket::rocket 208 - [32mGET[0m [34m/static/js/2.852e0a72.chunk.js[0m:
+INFO 2021-04-26T21:54:11.690072+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:54:11.690420+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:54:11.690486+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-04-26T21:54:11.690675+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-04-26T21:54:11.690972+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-04-26T21:54:11.691645+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-04-26T21:54:11.725410+08:00 rocket::rocket 208 - [32mGET[0m [34m/static/media/logo.6ce24c58.svg[0m [33mimage/avif[0m:
+INFO 2021-04-26T21:54:11.725574+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:54:11.725688+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-04-26T21:54:11.726001+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-04-26T21:54:11.783045+08:00 rocket::rocket 208 - [32mGET[0m [34m/manifest.json[0m:
+INFO 2021-04-26T21:54:11.783297+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:54:11.783643+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-04-26T21:54:11.784391+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-04-26T21:54:11.788791+08:00 rocket::rocket 208 - [32mGET[0m [34m/logo192.png[0m [33mimage/avif[0m:
+INFO 2021-04-26T21:54:11.789201+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:54:11.789476+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-04-26T21:54:11.790014+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-04-26T21:54:18.641267+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-04-26T21:54:18.641458+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-04-26T21:54:18.641494+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-04-26T21:54:18.641528+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-04-26T21:54:18.641563+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-04-26T21:54:18.641594+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-04-26T21:54:18.641627+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-04-26T21:54:18.641664+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-04-26T21:54:18.641697+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-04-26T21:54:18.641728+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-04-26T21:54:18.641764+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-04-26T21:54:18.641884+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-04-26T21:54:18.642098+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:54:18.642169+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:54:18.642230+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-04-26T21:54:18.642291+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-04-26T21:54:18.643526+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-04-26T21:54:23.942403+08:00 rocket::rocket 208 - [32mGET[0m [34m/[0m [33mtext/html[0m:
+INFO 2021-04-26T21:54:23.942731+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:54:23.942922+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-04-26T21:54:23.943428+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-04-26T21:54:24.024495+08:00 rocket::rocket 208 - [32mGET[0m [34m/static/css/main.31c5b48e.chunk.css[0m [33mtext/css[0m:
+INFO 2021-04-26T21:54:24.024814+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:54:24.025097+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-04-26T21:54:24.025486+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-04-26T21:54:24.028223+08:00 rocket::rocket 208 - [32mGET[0m [34m/static/js/main.3c8c066e.chunk.js[0m:
+INFO 2021-04-26T21:54:24.028414+08:00 rocket::rocket 208 - [32mGET[0m [34m/static/js/2.852e0a72.chunk.js[0m:
+INFO 2021-04-26T21:54:24.028513+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:54:24.028575+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:54:24.028797+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-04-26T21:54:24.028940+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-04-26T21:54:24.029043+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-04-26T21:54:24.029539+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-04-26T21:54:24.065012+08:00 rocket::rocket 208 - [32mGET[0m [34m/static/media/logo.6ce24c58.svg[0m [33mimage/avif[0m:
+INFO 2021-04-26T21:54:24.065188+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:54:24.065308+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-04-26T21:54:24.065483+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-04-26T21:54:24.109431+08:00 rocket::rocket 208 - [32mGET[0m [34m/manifest.json[0m:
+INFO 2021-04-26T21:54:24.109681+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:54:24.110023+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-04-26T21:54:24.110568+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-04-26T21:54:24.114056+08:00 rocket::rocket 208 - [32mGET[0m [34m/logo192.png[0m [33mimage/avif[0m:
+INFO 2021-04-26T21:54:24.114471+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:54:24.114855+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-04-26T21:54:24.115482+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-04-26T21:54:26.981809+08:00 rocket::rocket 208 - [32mGET[0m [34m/manifest.json[0m:
+INFO 2021-04-26T21:54:26.982308+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:54:26.982377+08:00 rocket::rocket 208 - [32mGET[0m [34m/static/css/main.31c5b48e.chunk.css[0m [33mtext/css[0m:
+INFO 2021-04-26T21:54:26.982599+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-04-26T21:54:26.982729+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:54:26.982909+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-04-26T21:54:26.984873+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-04-26T21:54:26.987598+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-04-26T21:54:32.791800+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/sync[0m [33mtext/html[0m:
+INFO 2021-04-26T21:54:32.792306+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-04-26T21:54:34.210468+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-04-26T21:54:34.210834+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-04-26T21:56:52.989464+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-04-26T21:56:52.990586+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-04-26T21:56:52.990673+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-04-26T21:56:52.990774+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-04-26T21:56:52.990848+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-04-26T21:56:52.990919+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-04-26T21:56:52.990995+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-04-26T21:56:52.991072+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-04-26T21:56:52.991147+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-04-26T21:56:52.991221+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-04-26T21:56:52.991318+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-04-26T21:56:52.991642+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-04-26T21:56:52.992275+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:56:52.992367+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:56:52.992435+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-04-26T21:56:52.992513+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-04-26T21:56:52.993836+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-04-26T21:57:05.454923+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-04-26T21:57:05.455285+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-04-26T21:57:05.455337+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-04-26T21:57:05.455397+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-04-26T21:57:05.455438+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-04-26T21:57:05.455516+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-04-26T21:57:05.455560+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-04-26T21:57:05.455603+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-04-26T21:57:05.455645+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-04-26T21:57:05.455685+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-04-26T21:57:05.455804+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-04-26T21:57:05.455986+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-04-26T21:57:05.456476+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:57:05.456558+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:57:05.456627+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-04-26T21:57:05.456712+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-04-26T21:57:05.457628+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-04-26T21:57:20.958274+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/sync[0m [33mtext/html[0m:
+INFO 2021-04-26T21:57:20.958847+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-04-26T21:57:22.110294+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-04-26T21:57:22.110723+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-04-26T21:57:22.189216+08:00 rocket::rocket 208 - [32mGET[0m [34m/favicon.ico[0m [33mimage/avif[0m:
+INFO 2021-04-26T21:57:22.189414+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T21:57:22.189534+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-04-26T21:57:22.190227+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-04-26T22:24:15.915668+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-04-26T22:24:15.916186+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-04-26T22:24:15.916422+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-04-26T22:24:15.916485+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-04-26T22:24:15.916523+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-04-26T22:24:15.916557+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-04-26T22:24:15.916591+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-04-26T22:24:15.916629+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-04-26T22:24:15.916665+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-04-26T22:24:15.916710+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-04-26T22:24:15.916756+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-04-26T22:24:15.916910+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-04-26T22:24:15.917332+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-04-26T22:24:15.917400+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T22:24:15.917464+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-04-26T22:24:15.917540+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-04-26T22:24:15.918625+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-04-26T22:26:30.140950+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-04-26T22:26:30.141199+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-04-26T22:26:30.141237+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-04-26T22:26:30.141285+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-04-26T22:26:30.141321+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-04-26T22:26:30.141354+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-04-26T22:26:30.141388+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-04-26T22:26:30.141424+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-04-26T22:26:30.141460+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-04-26T22:26:30.141496+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-04-26T22:26:30.141541+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-04-26T22:26:30.141689+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-04-26T22:26:30.142108+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-04-26T22:26:30.142176+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-04-26T22:26:30.142233+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-04-26T22:26:30.142309+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-04-26T22:26:30.144125+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
