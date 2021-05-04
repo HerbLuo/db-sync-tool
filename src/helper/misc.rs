@@ -1,5 +1,6 @@
 use crate::types::{SqlGroup, SqlGroups, SyncConfig, SyncConfigTables, ZzErrors, DbConfig};
 use crate::db_conn::{DBConn, mysql_conn::MysqlConn};
+use crate::helper::dirs::get_base_dir;
 use std::future::Future;
 use std::path::{Path, PathBuf};
 use std::fs;
@@ -14,10 +15,6 @@ use std::sync::Mutex;
 const LINE_ENDING: &'static str = "\r\n";
 #[cfg(not(windows))]
 const LINE_ENDING: &'static str = "\n";
-
-pub fn get_base_dir() -> Result<PathBuf, ZzErrors> {
-    Path::new("./").canonicalize().map_err(|e| ZzErrors::GetBaseDirError(e))
-}
 
 // 备份并清空（或创建）文件
 pub fn backup_file_and_clear_it(filepath: &Path) -> Result<(), ZzErrors> {

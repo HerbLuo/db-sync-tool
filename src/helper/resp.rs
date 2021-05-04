@@ -4,6 +4,8 @@ use rocket::http::Status;
 use rocket::response::{Responder, Response};
 use rocket::request::Request;
 
+use crate::types::ZzErrors;
+
 #[derive(Debug, Serialize)]
 pub struct Data<T> {
     pub ok: u8,
@@ -29,6 +31,18 @@ impl<'r, R: Responder<'r>> Responder<'r> for WithStatus<R> {
     }
 }
 
+impl<'r> Responder<'r> for ZzErrors {
+    fn respond_to(self, req: &Request) -> Result<Response<'r>, Status> {
+        Response::build_from(fail!(crate::ec::ServerError, self).respond_to(req)?)
+            .status(Status::InternalServerError)
+            .ok()
+    }
+}
+
+#[allow(dead_code)]
 pub type HttpErrorData = WithStatus<Json<Data<HttpError>>>;
 
+#[allow(dead_code)]
 pub type JsonResult<T> = Result<Json<Data<T>>, HttpErrorData>;
+
+pub type ZzJsonResult<T> = Result<Json<Data<T>>, ZzErrors>;

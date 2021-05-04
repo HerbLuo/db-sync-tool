@@ -8,26 +8,26 @@ pub enum ZzErrors {
     ExecSqlError(String),
 }
 
-#[derive(Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug)]
 pub enum Mode {
     #[serde(alias = "drop-create")]
     DropCreate,
 }
 
-#[derive(Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug)]
 pub enum AnyStr {
     #[serde(alias = "*")]
     AnyStr
 }
 
-#[derive(Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug)]
 #[serde(untagged)]
 pub enum SyncConfigTables {
     Any(AnyStr),
     Tables(Vec<String>),
 }
 
-#[derive(Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct ClientAddr {
     pub hostname: String,
     pub username: String,
@@ -36,7 +36,7 @@ pub struct ClientAddr {
     pub password: String,
 }
 
-#[derive(Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug)]
 #[serde(untagged)]
 pub enum DbConfig {
     Path(String),
@@ -46,8 +46,9 @@ pub enum DbConfig {
 fn default_buffer_size() -> u32 { 1024 }
 fn default_skip_sync_if_table_not_exist() -> bool { true }
 
-#[derive(Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct SyncConfig {
+    pub name: Option<String>,
     pub mode: Mode,
     pub tables: SyncConfigTables,
     pub from: DbConfig,
@@ -57,6 +58,13 @@ pub struct SyncConfig {
     #[serde(default = "default_skip_sync_if_table_not_exist")]
     pub skip_sync_if_table_not_exist: bool,
     // pub transactional: bool,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct ProjectConfig {
+  pub name: String,
+  pub def: Option<bool>,
+  pub syncs: Vec<SyncConfig>,
 }
 
 #[derive(Debug)]
