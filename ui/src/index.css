@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.zz-text-logo {
+  position: relative;
+  display: inline-block;
+}
+
+.zz-text-logo::before {
+  content: "zz";
+  position: absolute;
+  top: -26%;
+  right: 0;
+  transform: scale(0.5);
+}
+
+.zz-text-logo::after {
+  content: "zz";
+  opacity: 0;
+}

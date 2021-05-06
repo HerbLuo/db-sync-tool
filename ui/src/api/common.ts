@@ -27,18 +27,3 @@ export const post = makeSender("POST");
 export const put = makeSender("PUT");
 export const patch = makeSender("PATCH");
 export const del = makeSender("DELETE");
-
-interface Curd<T> {
-  getOne(): Promise<T>;
-  getAll(): Promise<T[]>;
-  saveOne(): Promise<void>;
-}
-export function createCurd<T>(url: string, options = {}): Curd<T> {
-  return {
-    getOne: get<T>.bind(url),
-    async getAll() {
-      return [];
-    },
-    saveOne: post<T>.bind(url),
-  };
-}

@@ -53,11 +53,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   toolbar: theme.mixins.toolbar,
 }));
 
-export type Hide = () => void;
+export type HideNav = () => void;
 
 interface Props {
   children: React.ReactNode;
-  drawer: (hide: Hide) => JSX.Element;
+  drawer: (hideNav: HideNav) => JSX.Element;
   title: string | JSX.Element;
 }
 
