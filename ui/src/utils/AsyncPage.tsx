@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { RouteComponentProps } from "react-router";
 import AsyncComponent from "./AsyncComponent";
 
@@ -13,4 +14,4 @@ function AsyncPage(props: RouteComponentProps<{ page: string }>) {
     );
 }
 
-export default AsyncPage;
+export default memo(AsyncPage);

@@ -5,6 +5,8 @@ import { getAll } from "./api/settings";
 import { HideNav } from "./utils/ResponsiveFrameView";
 import { usePromise } from "./utils/use-async";
 import { useSwitch } from "./utils/use-switch";
+import { Link } from "react-router-dom";
+import { CurrentSyncConfigContext } from "./contexts/current-sync-config";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -44,11 +46,23 @@ export function Drawer(prop: { hideNav: HideNav }) {
   return (
     <List component="div">
       <NestedListItem defaultExpand text="项目" icon={<HomeIcon/>}>
-        { (projects || []).map(project => (
-          <ListItem className={classes.nested} button={true} onClick={hideNav}>
-            <ListItemText primary={project.name}/>
-          </ListItem>
-        )) }
+        <CurrentSyncConfigContext.Consumer>
+          {([, setContext]) => (projects || []).map(project => (
+            <ListItem 
+              key={project.name}
+              component={Link}
+              className={classes.nested} 
+              button={true} 
+              to={`/project/${project.name}`}
+              onClick={() => {
+                setContext(project.syncs[0]);
+                hideNav();
+              }}
+            >
+              <ListItemText primary={project.name}/>
+            </ListItem>
+          )) }
+        </CurrentSyncConfigContext.Consumer>
       </NestedListItem>
     </List>
   );

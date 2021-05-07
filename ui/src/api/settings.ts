@@ -1,10 +1,5 @@
+import { Project } from "../types/project";
 import { SyncConfig } from "../types/sync-config";
-
-export interface Project {
-  name: string;
-  def?: boolean;
-  syncs: SyncConfig[];
-}
 
 type Projects = Project[];
 
@@ -15,9 +10,33 @@ const defProject: Project = {
 
 const KEY = "projects";
 
+export async function defSync(index: number): Promise<SyncConfig> {
+  return {
+    name: "同步" + index,
+    mode: "drop-create",
+    tables: [],
+    from: {
+      hostname: "",
+      username: "",
+      db: "",
+      port: 0,
+      password: "",
+    },
+    to: {
+      hostname: "",
+      username: "",
+      db: "",
+      port: 0,
+      password: "",
+    },
+  };
+}
+
 export async function getAll(): Promise<Projects | null> {
   const projects = localStorage.getItem(KEY);
-  return projects ? JSON.parse(projects) as Projects : [defProject];
+  return projects 
+    ? JSON.parse(projects) as Projects 
+    : defSync(1).then(sync => [{...defProject, syncs: [sync] }]) ;
 }
 
 export async function saveAll(projects: Projects): Promise<void> {

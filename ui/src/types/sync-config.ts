@@ -1,9 +1,9 @@
 export interface ClientAddr {
   hostname: string;
   username: string;
-  db: string,
-  port: number,
-  password: string,
+  db: string;
+  port: number;
+  password: string;
 }
 
 export interface SyncConfig {
