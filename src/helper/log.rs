@@ -11,7 +11,7 @@ use std::borrow::Borrow;
 
 const _1M: u64 = 1024 * 1024;
 
-const LOG_FILE_NAME: &str = "query-pro-server";
+const LOG_FILE_NAME: &str = "zz-db-sync";
 
 pub fn init() {
     let file_path = "logs/".to_owned() + LOG_FILE_NAME + ".log";
@@ -50,8 +50,8 @@ pub fn init() {
                 Root::builder()
                     .appender("logfile")
                     .appender("stderr")
-                    .build(LevelFilter::Info)
-//                    .build(LevelFilter::Trace)
+                    // .build(LevelFilter::Info)
+                   .build(LevelFilter::Trace)
             } else {
                 Root::builder()
                     .appender("logfile")

@@ -500,3 +500,97 @@ INFO 2021-05-04T20:11:39.592618+08:00 rocket::rocket 540 - [32mGET[0m [34m/ap
 INFO 2021-05-04T20:11:39.592681+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
 INFO 2021-05-04T20:11:39.592743+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/settings[0m [36m([0m[35msave_settings[0m[36m)[0m
 INFO 2021-05-04T20:11:39.594363+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-06-11T19:16:20.770864+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-11T19:16:20.771323+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-11T19:16:20.771360+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-06-11T19:16:20.771393+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-11T19:16:20.771441+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-11T19:16:20.771472+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-11T19:16:20.771503+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-11T19:16:20.771536+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-11T19:16:20.771569+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-11T19:16:20.771601+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-11T19:16:20.771634+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-11T19:16:20.771760+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-11T19:16:20.772189+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-11T19:16:20.772261+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T19:16:20.772335+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-11T19:16:20.772391+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-06-11T19:16:20.772455+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T19:16:20.772519+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/settings[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-11T19:16:20.773163+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-06-11T20:53:47.414552+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-11T20:53:47.414981+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-11T20:53:47.415187+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-06-11T20:53:47.415249+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-11T20:53:47.415329+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-11T20:53:47.415386+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-11T20:53:47.415548+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-11T20:53:47.415614+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-11T20:53:47.415676+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-11T20:53:47.415734+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-11T20:53:47.415801+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-11T20:53:47.416135+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-11T20:53:47.416873+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-11T20:53:47.416993+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T20:53:47.417151+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-11T20:53:47.417284+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-06-11T20:53:47.417401+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T20:53:47.417512+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/settings[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-11T20:53:47.418509+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-06-11T20:54:51.526844+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/settings[0m [33mtext/html[0m:
+INFO 2021-06-11T20:54:51.527357+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+ERROR 2021-06-11T20:54:51.528044+08:00 db_sync_tool::helper::resp 36 - 17234e5bd4b2472a9f86eb16740e5ad6:32768:IoError("配置文件读取失败 Os { code: 2, kind: NotFound, message: \"No such file or directory\" }")
+INFO 2021-06-11T20:54:51.528458+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-11T20:54:51.529198+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-11T20:54:51.603190+08:00 rocket::rocket 208 - [32mGET[0m [34m/favicon.ico[0m [33mimage/avif[0m:
+INFO 2021-06-11T20:54:51.603667+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T20:54:51.604468+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-11T20:54:51.605619+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-11T20:59:43.303308+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-11T20:59:43.303755+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-11T20:59:43.303818+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-06-11T20:59:43.303875+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-11T20:59:43.303969+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-11T20:59:43.304026+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-11T20:59:43.304080+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-11T20:59:43.304141+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-11T20:59:43.304205+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-11T20:59:43.304262+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-11T20:59:43.304317+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-11T20:59:43.304542+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-11T20:59:43.305448+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-11T20:59:43.305559+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T20:59:43.305672+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-11T20:59:43.305792+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-06-11T20:59:43.305900+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T20:59:43.306006+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/settings[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-11T20:59:43.306922+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-06-11T20:59:49.059707+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/settings[0m [33mtext/html[0m:
+INFO 2021-06-11T20:59:49.060506+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+ERROR 2021-06-11T20:59:49.061033+08:00 db_sync_tool::helper::resp 36 - 5d20d99c07964c21bc0082dddab40c1b:32768:IoError("配置文件读取失败 Os { code: 2, kind: NotFound, message: \"No such file or directory\" }")
+INFO 2021-06-11T20:59:49.061471+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-11T20:59:49.062944+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-11T20:59:49.145452+08:00 rocket::rocket 208 - [32mGET[0m [34m/favicon.ico[0m [33mimage/avif[0m:
+INFO 2021-06-11T20:59:49.145869+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T20:59:49.146171+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-11T20:59:49.146761+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-11T21:00:04.952540+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-11T21:00:04.952910+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-11T21:00:04.952949+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-06-11T21:00:04.952982+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-11T21:00:04.953018+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-11T21:00:04.953050+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-11T21:00:04.953084+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-11T21:00:04.953120+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-11T21:00:04.953154+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:00:04.953185+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:00:04.953219+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-11T21:00:04.953329+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-11T21:00:04.953457+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:00:04.953594+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:00:04.953670+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-11T21:00:04.953760+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-06-11T21:00:04.953826+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T21:00:04.953890+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/settings[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-11T21:00:04.954565+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m

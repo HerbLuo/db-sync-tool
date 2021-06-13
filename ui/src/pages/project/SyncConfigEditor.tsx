@@ -1,6 +1,5 @@
 import { createStyles, Grid, makeStyles, TextField, Theme } from "@material-ui/core";
 import React, { ChangeEventHandler } from "react";
-import { ChangeEvent } from "react";
 import { useState } from "react";
 import { ClientAddr, SyncConfig } from "../../types/sync-config";
 import { formatAddr } from "../../utils/client-addr-str-to-obj";
@@ -32,8 +31,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     code: {
       '& textarea': {
-        fontSize: "12px",
-        fontFamily: "ProggyClean",
+        fontSize: "14px",
+        fontFamily: "JetBrainsMono, monospace",
       }
     }
   }),
@@ -74,9 +73,9 @@ export function SyncConfigEditor(props: Props) {
     setConfigValid(true);
     setConfigInStr(stringifyConfig(newConfig));
   }
-  const onConfigChange = (key: keyof SyncConfig) => (e: ChangeEvent<HTMLInputElement>) => {
+  // const onConfigChange = (key: keyof SyncConfig) => (e: ChangeEvent<HTMLInputElement>) => {
 
-  }
+  // }
   
   return (
     <Grid container className={classes.root} alignItems="stretch">
@@ -95,9 +94,9 @@ export function SyncConfigEditor(props: Props) {
         />
       </Grid>
       <Grid item className={classes.componentGroup} xs={12} sm={6}>
-        <ZzTextField label="模式" value={config.mode} />
+        <ZzTextField label="模式" value={config.mode} readOnly/>
         <ClientAddrConfig label="源数据库" addr={formatAddr(config.from)} onChange={onAddrChange("from")}/>
-        <ZzTextField label="表" />
+        <ZzTextField label="表" value={config.mode} readOnly/>
         <ClientAddrConfig label="目标数据库" addr={formatAddr(config.to)} onChange={onAddrChange("to")}/>
       </Grid>
     </Grid>

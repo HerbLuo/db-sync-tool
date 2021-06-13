@@ -1,5 +1,6 @@
 import { Project } from "../types/project";
 import { SyncConfig } from "../types/sync-config";
+import { baseUrl, get } from "./common";
 
 type Projects = Project[];
 
@@ -33,6 +34,8 @@ export async function defSync(index: number): Promise<SyncConfig> {
 }
 
 export async function getAll(): Promise<Projects | null> {
+  get(`${baseUrl}`)
+
   const projects = localStorage.getItem(KEY);
   return projects 
     ? JSON.parse(projects) as Projects 

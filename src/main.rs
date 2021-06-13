@@ -1,4 +1,5 @@
 #![feature(decl_macro)]
+#![feature(once_cell)]
 
 #[macro_use]
 extern crate serde;

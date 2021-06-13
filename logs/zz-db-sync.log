@@ -1,0 +1,674 @@
+INFO 2021-06-11T21:02:43.439569+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-11T21:02:43.439935+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-11T21:02:43.439991+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-06-11T21:02:43.440041+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-11T21:02:43.440107+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-11T21:02:43.440156+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-11T21:02:43.440203+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-11T21:02:43.440256+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-11T21:02:43.440306+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:02:43.440354+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:02:43.440403+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-11T21:02:43.440597+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-11T21:02:43.441278+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:02:43.441397+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:02:43.441508+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-11T21:02:43.441617+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-06-11T21:02:43.441715+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T21:02:43.441811+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/settings[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-11T21:02:43.442714+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-06-11T21:02:46.034386+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/settings[0m [33mtext/html[0m:
+INFO 2021-06-11T21:02:46.034969+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T21:02:46.035328+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/zz-db-sync/settings.json"
+ERROR 2021-06-11T21:02:46.035643+08:00 db_sync_tool::helper::resp 36 - bbab3aaa0cda4a34a4f53f6e3082a2d5:32768:IoError("配置文件读取失败 Os { code: 2, kind: NotFound, message: \"No such file or directory\" }")
+INFO 2021-06-11T21:02:46.036004+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-11T21:02:46.036964+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-11T21:02:46.123499+08:00 rocket::rocket 208 - [32mGET[0m [34m/favicon.ico[0m [33mimage/avif[0m:
+INFO 2021-06-11T21:02:46.123932+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:02:46.124217+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-11T21:02:46.124828+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-11T21:09:53.440764+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-11T21:09:53.441130+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-11T21:09:53.441187+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-06-11T21:09:53.441239+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-11T21:09:53.441366+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-11T21:09:53.441421+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-11T21:09:53.441472+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-11T21:09:53.441527+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-11T21:09:53.441578+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:09:53.441627+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:09:53.441688+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-11T21:09:53.441881+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-11T21:09:53.442533+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:09:53.442628+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:09:53.442728+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-11T21:09:53.442830+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-06-11T21:09:53.442923+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T21:09:53.443018+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/settings[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-11T21:09:53.443885+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-06-11T21:10:08.236755+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/settings[0m [33mtext/html[0m:
+INFO 2021-06-11T21:10:08.237268+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T21:10:08.237650+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/.zz-db-sync/settings.json"
+ERROR 2021-06-11T21:10:08.238015+08:00 db_sync_tool::helper::resp 36 - 2ca5a6e402514c16ad15dacf6e5dc2a0:32768:IoError("配置文件读取失败 Os { code: 2, kind: NotFound, message: \"No such file or directory\" }")
+INFO 2021-06-11T21:10:08.238400+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-11T21:10:08.239498+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-11T21:10:08.324441+08:00 rocket::rocket 208 - [32mGET[0m [34m/favicon.ico[0m [33mimage/avif[0m:
+INFO 2021-06-11T21:10:08.324866+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:10:08.325152+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-11T21:10:08.325632+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-11T21:10:35.850937+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-11T21:10:35.851279+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-11T21:10:35.851331+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-06-11T21:10:35.851377+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-11T21:10:35.851439+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-11T21:10:35.851486+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-11T21:10:35.851533+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-11T21:10:35.851581+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-11T21:10:35.851630+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:10:35.851674+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:10:35.851720+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-11T21:10:35.851896+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-11T21:10:35.852492+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:10:35.852576+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:10:35.852669+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-11T21:10:35.852766+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-06-11T21:10:35.852856+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T21:10:35.852945+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/settings[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-11T21:10:35.853903+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-06-11T21:10:36.624251+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/settings[0m [33mtext/html[0m:
+INFO 2021-06-11T21:10:36.629307+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T21:10:36.629635+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/.zz-db-sync/setting.json"
+INFO 2021-06-11T21:10:36.630516+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-11T21:10:36.631526+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-11T21:10:36.755495+08:00 rocket::rocket 208 - [32mGET[0m [34m/favicon.ico[0m [33mimage/avif[0m:
+INFO 2021-06-11T21:10:36.755692+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:10:36.755827+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-11T21:10:36.756130+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-11T21:17:48.086898+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-11T21:17:48.087274+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-11T21:17:48.087313+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-06-11T21:17:48.087347+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-11T21:17:48.087395+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-11T21:17:48.087428+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-11T21:17:48.087460+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-11T21:17:48.087497+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-11T21:17:48.087533+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:17:48.087566+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:17:48.087598+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-11T21:17:48.088110+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-11T21:17:48.088537+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:17:48.088611+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:17:48.088679+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-11T21:17:48.088749+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-06-11T21:17:48.088812+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T21:17:48.088875+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/settings[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-11T21:17:48.089980+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-06-11T21:17:51.904882+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/settings[0m [33mtext/html[0m:
+INFO 2021-06-11T21:17:51.905519+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T21:17:51.905851+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/.zz-db-sync/setting.json"
+INFO 2021-06-11T21:17:51.907043+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-11T21:17:51.908181+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-11T21:17:51.968860+08:00 rocket::rocket 208 - [32mGET[0m [34m/favicon.ico[0m [33mimage/avif[0m:
+INFO 2021-06-11T21:17:51.969273+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:17:51.969567+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-11T21:17:51.973237+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-11T21:23:27.232157+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-11T21:23:27.232562+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-11T21:23:27.232620+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-06-11T21:23:27.232677+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-11T21:23:27.232750+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-11T21:23:27.232802+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-11T21:23:27.232856+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-11T21:23:27.232908+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-11T21:23:27.233080+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:23:27.233148+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:23:27.233223+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-11T21:23:27.233498+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-11T21:23:27.234159+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:23:27.234256+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:23:27.234361+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-11T21:23:27.234461+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-06-11T21:23:27.234560+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T21:23:27.234656+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/settings[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-11T21:23:27.235666+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-06-11T21:23:29.482611+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/settings[0m [33mtext/html[0m:
+INFO 2021-06-11T21:23:29.483236+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T21:23:29.483534+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/.zz-db-sync/setting.json"
+INFO 2021-06-11T21:23:29.484945+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-11T21:23:29.485858+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-11T21:25:14.748743+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-11T21:25:14.749132+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-11T21:25:14.749270+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-06-11T21:25:14.749319+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-11T21:25:14.749385+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-11T21:25:14.749432+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-11T21:25:14.749513+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-11T21:25:14.749617+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-11T21:25:14.749666+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:25:14.749710+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:25:14.749776+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-11T21:25:14.749986+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-11T21:25:14.750594+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:25:14.750682+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:25:14.750775+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-11T21:25:14.750855+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-06-11T21:25:14.750958+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T21:25:14.751043+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/settings[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-11T21:25:14.752024+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-06-11T21:25:16.728127+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/settings[0m [33mtext/html[0m:
+INFO 2021-06-11T21:25:16.728654+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T21:25:16.728968+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/.zz-db-sync/setting.json"
+INFO 2021-06-11T21:25:16.730282+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-11T21:25:16.731338+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-11T21:25:52.836134+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-11T21:25:52.836579+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-11T21:25:52.836647+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-06-11T21:25:52.836707+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-11T21:25:52.836787+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-11T21:25:52.836846+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-11T21:25:52.836902+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-11T21:25:52.836963+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-11T21:25:52.837166+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:25:52.837320+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:25:52.837418+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-11T21:25:52.837702+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-11T21:25:52.838562+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:25:52.838698+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:25:52.838833+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-11T21:25:52.838950+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-06-11T21:25:52.839079+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T21:25:52.839206+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/settings[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-11T21:25:52.840091+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-06-11T21:25:56.063906+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/settings[0m [33mtext/html[0m:
+INFO 2021-06-11T21:25:56.064469+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T21:25:56.064784+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/.zz-db-sync/setting"
+ERROR 2021-06-11T21:25:56.065129+08:00 db_sync_tool::helper::resp 36 - fa53f4a05de64b03b6e887fffffbd467:32768:IoError("配置文件读取失败 Os { code: 2, kind: NotFound, message: \"No such file or directory\" }")
+INFO 2021-06-11T21:25:56.065632+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-11T21:25:56.066714+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-11T21:25:56.152439+08:00 rocket::rocket 208 - [32mGET[0m [34m/favicon.ico[0m [33mimage/avif[0m:
+INFO 2021-06-11T21:25:56.152855+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:25:56.153137+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-11T21:25:56.153684+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-11T21:27:59.969659+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-11T21:27:59.970133+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-11T21:27:59.970195+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-06-11T21:27:59.970251+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-11T21:27:59.970325+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-11T21:27:59.970380+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-11T21:27:59.970434+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-11T21:27:59.970491+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-11T21:27:59.970548+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:27:59.970603+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:27:59.970680+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-11T21:27:59.970921+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-11T21:27:59.971692+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:27:59.971808+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:27:59.971926+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-11T21:27:59.972027+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-06-11T21:27:59.972136+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T21:27:59.972246+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/settings[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-11T21:27:59.973605+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-06-11T21:28:36.226338+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-11T21:28:36.226719+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-11T21:28:36.226772+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-06-11T21:28:36.226820+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-11T21:28:36.226881+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-11T21:28:36.226996+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-11T21:28:36.227114+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-11T21:28:36.227187+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-11T21:28:36.227237+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:28:36.227283+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:28:36.227344+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-11T21:28:36.227585+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-11T21:28:36.228176+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:28:36.228267+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:28:36.228365+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-11T21:28:36.228445+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-06-11T21:28:36.228594+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T21:28:36.228682+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/settings[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-11T21:28:36.229569+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-06-11T21:29:25.155703+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-11T21:29:25.156159+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-11T21:29:25.156202+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-06-11T21:29:25.156241+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-11T21:29:25.156298+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-11T21:29:25.156336+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-11T21:29:25.156375+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-11T21:29:25.156414+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-11T21:29:25.156453+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:29:25.156491+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:29:25.156541+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-11T21:29:25.156698+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-11T21:29:25.157169+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:29:25.157243+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:29:25.157321+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-11T21:29:25.157388+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-06-11T21:29:25.157462+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/settings[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T21:29:25.157535+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/settings[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-11T21:29:25.158376+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-06-11T21:33:53.222535+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-11T21:33:53.222811+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-11T21:33:53.222848+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-06-11T21:33:53.222882+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-11T21:33:53.222925+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-11T21:33:53.222958+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-11T21:33:53.222995+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-11T21:33:53.223030+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-11T21:33:53.223165+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:33:53.223258+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-11T21:33:53.223306+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-11T21:33:53.223510+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-11T21:33:53.223902+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:33:53.223965+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:33:53.224032+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-11T21:33:53.224091+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/sync[0m [36m([0m[35msync[0m[36m)[0m
+INFO 2021-06-11T21:33:53.224157+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T21:33:53.224219+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/setting[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-11T21:33:53.224866+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-06-11T21:34:01.031802+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/settings[0m [33mtext/html[0m:
+INFO 2021-06-11T21:34:01.032337+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+WARN 2021-06-11T21:34:01.033879+08:00 rocket::response::responder 265 - Response was `None`.
+INFO 2021-06-11T21:34:01.034081+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;31mFailure[0m
+WARN 2021-06-11T21:34:01.034205+08:00 rocket::rocket 325 - Responding with [31m404 Not Found[0m catcher.
+INFO 2021-06-11T21:34:01.035717+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-11T21:34:01.152579+08:00 rocket::rocket 208 - [32mGET[0m [34m/favicon.ico[0m [33mimage/avif[0m:
+INFO 2021-06-11T21:34:01.153083+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T21:34:01.153364+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-11T21:34:01.154045+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-11T21:34:04.523493+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/setting[0m [33mtext/html[0m:
+INFO 2021-06-11T21:34:04.524003+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T21:34:04.524352+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/.zz-db-sync/setting"
+ERROR 2021-06-11T21:34:04.524628+08:00 db_sync_tool::helper::resp 36 - 14586f0073804d459e20804a796aeec2:32768:IoError("配置文件读取失败 Os { code: 2, kind: NotFound, message: \"No such file or directory\" }")
+INFO 2021-06-11T21:34:04.524971+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-11T21:34:04.525333+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-11T21:36:18.941075+08:00 rocket::rocket 208 - [32mPOST[0m [34m/api/setting[0m [33mtext/plain; charset=UTF-8[0m:
+INFO 2021-06-11T21:36:18.941434+08:00 rocket::rocket 295 - Matched: [32mPOST[0m [34m/api/setting[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-11T21:36:18.941702+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/.zz-db-sync/setting"
+INFO 2021-06-11T21:36:18.942316+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-11T21:36:18.942645+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-11T21:36:21.498958+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/setting[0m [33mtext/html[0m:
+INFO 2021-06-11T21:36:21.499566+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T21:36:21.499802+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/.zz-db-sync/setting"
+INFO 2021-06-11T21:36:21.500097+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-11T21:36:21.500417+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-11T22:20:49.206373+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/.zz-db-sync/setting"
+INFO 2021-06-11T22:20:49.208594+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-11T22:20:49.208708+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-11T22:20:49.208777+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-06-11T22:20:49.208827+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-11T22:20:49.208893+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-11T22:20:49.208942+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-11T22:20:49.208989+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-11T22:20:49.209042+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-11T22:20:49.209091+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-11T22:20:49.209139+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-11T22:20:49.209188+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-11T22:20:49.209395+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-11T22:20:49.210025+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-11T22:20:49.210131+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-11T22:20:49.210246+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-11T22:20:49.210361+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/do-synchronization[0m [36m([0m[35mdo_synchronization[0m[36m)[0m
+INFO 2021-06-11T22:20:49.210467+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T22:20:49.210573+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/setting[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-11T22:20:49.211510+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-06-11T22:21:43.685678+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/setting[0m [33mtext/html[0m:
+INFO 2021-06-11T22:21:43.686555+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-11T22:21:43.687147+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-11T22:21:43.688739+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-12T15:42:38.630048+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/.zz-db-sync/setting"
+INFO 2021-06-12T15:42:38.631821+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-12T15:42:38.632003+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-12T15:42:38.632052+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-06-12T15:42:38.632119+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-12T15:42:38.632168+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-12T15:42:38.632201+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-12T15:42:38.632237+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-12T15:42:38.632271+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-12T15:42:38.632353+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-12T15:42:38.632389+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-12T15:42:38.632423+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-12T15:42:38.632571+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-12T15:42:38.633077+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-12T15:42:38.633162+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-12T15:42:38.633236+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-12T15:42:38.633322+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/do-synchronization[0m [36m([0m[35mdo_synchronization[0m[36m)[0m
+INFO 2021-06-12T15:42:38.633397+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-12T15:42:38.633460+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/setting[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-12T15:42:38.634771+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-06-12T15:42:44.654275+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/setting[0m [33mtext/html[0m:
+INFO 2021-06-12T15:42:44.654795+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-12T15:42:44.655351+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-12T15:42:44.656708+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T19:47:14.877850+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/.zz-db-sync/setting"
+INFO 2021-06-13T19:47:14.879651+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-13T19:47:14.879777+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-13T19:47:14.879862+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-06-13T19:47:14.879924+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-13T19:47:14.880006+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-13T19:47:14.880066+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-13T19:47:14.880126+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-13T19:47:14.880189+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-13T19:47:14.880252+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-13T19:47:14.880313+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-13T19:47:14.880373+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-13T19:47:14.880604+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-13T19:47:14.881199+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-13T19:47:14.881270+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T19:47:14.881356+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-13T19:47:14.881457+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/do-synchronization[0m [36m([0m[35mdo_synchronization[0m[36m)[0m
+INFO 2021-06-13T19:47:14.881532+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-13T19:47:14.881601+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/setting[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-13T19:47:14.882292+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-06-13T19:48:41.064251+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/.zz-db-sync/configuration"
+INFO 2021-06-13T19:48:41.066756+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-13T19:48:41.066893+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-13T19:48:41.066985+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-06-13T19:48:41.067050+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-13T19:48:41.067137+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-13T19:48:41.067200+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-13T19:48:41.067262+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-13T19:48:41.067328+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-13T19:48:41.067392+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-13T19:48:41.067457+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-13T19:48:41.067521+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-13T19:48:41.067752+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-13T19:48:41.068575+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-13T19:48:41.068700+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T19:48:41.068836+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-13T19:48:41.068972+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/do-synchronization[0m [36m([0m[35mdo_synchronization[0m[36m)[0m
+INFO 2021-06-13T19:48:41.069097+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-13T19:48:41.069245+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/setting[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-13T19:48:41.070240+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-06-13T20:10:10.553398+08:00 rocket::rocket 208 - [32mGET[0m [34m/[0m [33mtext/html[0m:
+INFO 2021-06-13T20:10:10.554124+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-13T20:10:10.554429+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:10:10.556219+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:10:10.602647+08:00 rocket::rocket 208 - [32mGET[0m [34m/static/css/main.31c5b48e.chunk.css[0m [33mtext/css[0m:
+INFO 2021-06-13T20:10:10.603171+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T20:10:10.603680+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:10:10.604370+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:10:10.615285+08:00 rocket::rocket 208 - [32mGET[0m [34m/static/js/main.3c8c066e.chunk.js[0m:
+INFO 2021-06-13T20:10:10.615506+08:00 rocket::rocket 208 - [32mGET[0m [34m/static/js/2.852e0a72.chunk.js[0m:
+INFO 2021-06-13T20:10:10.615674+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T20:10:10.615793+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T20:10:10.615963+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:10:10.616069+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:10:10.616708+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:10:10.618067+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:10:10.653819+08:00 rocket::rocket 208 - [32mGET[0m [34m/static/media/logo.6ce24c58.svg[0m [33mimage/avif[0m:
+INFO 2021-06-13T20:10:10.653980+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T20:10:10.654097+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:10:10.654255+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:10:10.696223+08:00 rocket::rocket 208 - [32mGET[0m [34m/manifest.json[0m:
+INFO 2021-06-13T20:10:10.696407+08:00 rocket::rocket 208 - [32mGET[0m [34m/favicon.ico[0m [33mimage/avif[0m:
+INFO 2021-06-13T20:10:10.696638+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T20:10:10.696741+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T20:10:10.697015+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:10:10.697541+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:10:10.698266+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:10:10.698871+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:10:10.700833+08:00 rocket::rocket 208 - [32mGET[0m [34m/logo192.png[0m [33mimage/avif[0m:
+INFO 2021-06-13T20:10:10.701246+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T20:10:10.701571+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:10:10.702195+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:10:34.911578+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/settings[0m [33mtext/html[0m:
+INFO 2021-06-13T20:10:34.912120+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+WARN 2021-06-13T20:10:34.912342+08:00 rocket::response::responder 265 - Response was `None`.
+INFO 2021-06-13T20:10:34.912431+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;31mFailure[0m
+WARN 2021-06-13T20:10:34.912544+08:00 rocket::rocket 325 - Responding with [31m404 Not Found[0m catcher.
+INFO 2021-06-13T20:10:34.913024+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:10:37.712629+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/setting[0m [33mtext/html[0m:
+INFO 2021-06-13T20:10:37.713147+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+ERROR 2021-06-13T20:10:37.713643+08:00 db_sync_tool::helper::resp 36 - 0a1c57d09299481da4430404ee756bd7:32768:IoError("配置文件读取失败 Os { code: 2, kind: NotFound, message: \"No such file or directory\" }")
+INFO 2021-06-13T20:10:37.713964+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:10:37.714261+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:10:54.565345+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/setting[0m [33mtext/html[0m:
+INFO 2021-06-13T20:10:54.565919+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+ERROR 2021-06-13T20:10:54.566188+08:00 db_sync_tool::helper::resp 36 - b1a3f5c555f14c098f053282a43902db:32768:IoError("配置文件读取失败 Os { code: 2, kind: NotFound, message: \"No such file or directory\" }")
+INFO 2021-06-13T20:10:54.566454+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:10:54.566791+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:10:54.660878+08:00 rocket::rocket 208 - [32mGET[0m [34m/favicon.ico[0m [33mimage/avif[0m:
+INFO 2021-06-13T20:10:54.661454+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T20:10:54.661772+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:10:54.662107+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:11:21.106205+08:00 rocket::rocket 208 - [32mPOST[0m [34m/api/setting[0m [33mtext/plain; charset=UTF-8[0m:
+INFO 2021-06-13T20:11:21.106536+08:00 rocket::rocket 295 - Matched: [32mPOST[0m [34m/api/setting[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-13T20:11:21.106794+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/.zz-db-sync/configuration"
+INFO 2021-06-13T20:11:21.107400+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:11:21.107782+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:11:23.606561+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/setting[0m [33mtext/html[0m:
+INFO 2021-06-13T20:11:23.607100+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-13T20:11:23.607385+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:11:23.607699+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:12:14.223569+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/setting[0m [33mtext/html[0m:
+INFO 2021-06-13T20:12:14.224356+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-13T20:12:14.224603+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:12:14.224975+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:17:54.338602+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/setting[0m [33mtext/html[0m:
+INFO 2021-06-13T20:17:54.339412+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-13T20:17:54.339941+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:17:54.340262+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:42:16.947956+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/.zz-db-sync/configuration"
+INFO 2021-06-13T20:42:16.950453+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-13T20:42:16.950583+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-13T20:42:16.950698+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-06-13T20:42:16.950756+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-13T20:42:16.950832+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-13T20:42:16.950885+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-13T20:42:16.950937+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-13T20:42:16.950993+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-13T20:42:16.951049+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-13T20:42:16.951103+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-13T20:42:16.951155+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-13T20:42:16.951355+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-13T20:42:16.952257+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-13T20:42:16.952399+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T20:42:16.952763+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-13T20:42:16.952921+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/do-synchronization[0m [36m([0m[35mdo_synchronization[0m[36m)[0m
+INFO 2021-06-13T20:42:16.953045+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-13T20:42:16.953162+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/setting[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-13T20:42:16.954411+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-06-13T20:48:37.569551+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/.zz-db-sync/configuration"
+INFO 2021-06-13T20:48:37.571864+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-13T20:48:37.571972+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-13T20:48:37.572043+08:00 rocket::rocket 411 - port: [1;49;39m8000[0m
+INFO 2021-06-13T20:48:37.572093+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-13T20:48:37.572162+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-13T20:48:37.572211+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-13T20:48:37.572259+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-13T20:48:37.572310+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-13T20:48:37.572360+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-13T20:48:37.572409+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-13T20:48:37.572461+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-13T20:48:37.572641+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-13T20:48:37.573338+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-13T20:48:37.573475+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T20:48:37.573590+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-13T20:48:37.573706+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/do-synchronization[0m [36m([0m[35mdo_synchronization[0m[36m)[0m
+INFO 2021-06-13T20:48:37.573808+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-13T20:48:37.573951+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/setting[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-13T20:48:37.575091+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:8000[0m
+INFO 2021-06-13T20:58:50.675964+08:00 rocket::rocket 208 - [32mGET[0m [34m/[0m [33mtext/html[0m:
+INFO 2021-06-13T20:58:50.676814+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-13T20:58:50.677766+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:58:50.679793+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:58:50.726786+08:00 rocket::rocket 208 - [32mGET[0m [34m/static/css/main.31c5b48e.chunk.css[0m [33mtext/css[0m:
+INFO 2021-06-13T20:58:50.727163+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T20:58:50.727689+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:58:50.728922+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:58:50.734753+08:00 rocket::rocket 208 - [32mGET[0m [34m/static/js/2.852e0a72.chunk.js[0m:
+INFO 2021-06-13T20:58:50.735041+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T20:58:50.735337+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:58:50.736600+08:00 rocket::rocket 208 - [32mGET[0m [34m/static/js/main.3c8c066e.chunk.js[0m:
+INFO 2021-06-13T20:58:50.736801+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T20:58:50.737119+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:58:50.737792+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:58:50.741449+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:58:50.789780+08:00 rocket::rocket 208 - [32mGET[0m [34m/static/media/logo.6ce24c58.svg[0m [33mimage/avif[0m:
+INFO 2021-06-13T20:58:50.789922+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T20:58:50.790046+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:58:50.790270+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:58:50.833296+08:00 rocket::rocket 208 - [32mGET[0m [34m/manifest.json[0m:
+INFO 2021-06-13T20:58:50.833787+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T20:58:50.833913+08:00 rocket::rocket 208 - [32mGET[0m [34m/favicon.ico[0m [33mimage/avif[0m:
+INFO 2021-06-13T20:58:50.834317+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T20:58:50.834605+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:58:50.835367+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:58:50.836668+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:58:50.837233+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T20:58:50.840245+08:00 rocket::rocket 208 - [32mGET[0m [34m/logo192.png[0m [33mimage/avif[0m:
+INFO 2021-06-13T20:58:50.840385+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T20:58:50.840514+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T20:58:50.840860+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T21:07:16.389909+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/.zz-db-sync/configuration"
+INFO 2021-06-13T21:07:16.393498+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-13T21:07:16.393591+08:00 rocket::rocket 410 - address: [1;49;39m0.0.0.0[0m
+INFO 2021-06-13T21:07:16.393646+08:00 rocket::rocket 411 - port: [1;49;39m9886[0m
+INFO 2021-06-13T21:07:16.393697+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-13T21:07:16.393769+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-13T21:07:16.393827+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-13T21:07:16.393885+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-13T21:07:16.393945+08:00 rocket::rocket 423 - keep-alive: [1;49;39m10s[0m
+INFO 2021-06-13T21:07:16.394025+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-13T21:07:16.394080+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-13T21:07:16.394138+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-13T21:07:16.394339+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-13T21:07:16.394713+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-13T21:07:16.394820+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T21:07:16.394940+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-13T21:07:16.395056+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/do-synchronization[0m [36m([0m[35mdo_synchronization[0m[36m)[0m
+INFO 2021-06-13T21:07:16.395168+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-13T21:07:16.395273+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/setting[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-13T21:07:16.395486+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39m0.0.0.0:9886[0m
+INFO 2021-06-13T21:07:21.434201+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/.zz-db-sync/configuration"
+INFO 2021-06-13T21:07:21.435177+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-13T21:07:21.435218+08:00 rocket::rocket 410 - address: [1;49;39m0.0.0.0[0m
+INFO 2021-06-13T21:07:21.435254+08:00 rocket::rocket 411 - port: [1;49;39m9886[0m
+INFO 2021-06-13T21:07:21.435287+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-13T21:07:21.435321+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-13T21:07:21.435353+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-13T21:07:21.435482+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-13T21:07:21.435528+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-13T21:07:21.435565+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-13T21:07:21.435601+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-13T21:07:21.435634+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-13T21:07:21.435743+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-13T21:07:21.435838+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-13T21:07:21.435903+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T21:07:21.435972+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-13T21:07:21.436036+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/do-synchronization[0m [36m([0m[35mdo_synchronization[0m[36m)[0m
+INFO 2021-06-13T21:07:21.436102+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-13T21:07:21.436164+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/setting[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-13T21:07:21.436283+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39m0.0.0.0:9886[0m
+INFO 2021-06-13T21:08:18.067425+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/setting2[0m [33mtext/html[0m:
+INFO 2021-06-13T21:08:18.068913+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+WARN 2021-06-13T21:08:18.069554+08:00 rocket::response::responder 265 - Response was `None`.
+INFO 2021-06-13T21:08:18.069699+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;31mFailure[0m
+WARN 2021-06-13T21:08:18.069825+08:00 rocket::rocket 325 - Responding with [31m404 Not Found[0m catcher.
+INFO 2021-06-13T21:08:18.074106+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T21:08:26.211723+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/setting[0m [33mtext/html[0m:
+INFO 2021-06-13T21:08:26.212280+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-13T21:08:26.213194+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T21:08:26.213832+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T21:10:32.972546+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/.zz-db-sync/configuration"
+INFO 2021-06-13T21:10:32.973665+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-13T21:10:32.973708+08:00 rocket::rocket 410 - address: [1;49;39m127.0.0.1[0m
+INFO 2021-06-13T21:10:32.973855+08:00 rocket::rocket 411 - port: [1;49;39m9886[0m
+INFO 2021-06-13T21:10:32.973897+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-13T21:10:32.974043+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-13T21:10:32.974081+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-13T21:10:32.974116+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-13T21:10:32.974152+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-13T21:10:32.974187+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-13T21:10:32.974248+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-13T21:10:32.974285+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-13T21:10:32.974400+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-13T21:10:32.974499+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-13T21:10:32.974562+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T21:10:32.974631+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-13T21:10:32.974691+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/do-synchronization[0m [36m([0m[35mdo_synchronization[0m[36m)[0m
+INFO 2021-06-13T21:10:32.974938+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-13T21:10:32.975023+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/setting[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-13T21:10:32.975158+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39m127.0.0.1:9886[0m
+INFO 2021-06-13T21:10:40.256252+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/setting2[0m [33mtext/html[0m:
+INFO 2021-06-13T21:10:40.256843+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+WARN 2021-06-13T21:10:40.257101+08:00 rocket::response::responder 265 - Response was `None`.
+INFO 2021-06-13T21:10:40.257203+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;31mFailure[0m
+WARN 2021-06-13T21:10:40.257319+08:00 rocket::rocket 325 - Responding with [31m404 Not Found[0m catcher.
+INFO 2021-06-13T21:10:40.258449+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T21:10:43.099658+08:00 rocket::rocket 208 - [32mGET[0m [34m/api/setting[0m [33mtext/html[0m:
+INFO 2021-06-13T21:10:43.100353+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-13T21:10:43.100689+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T21:10:43.101316+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T21:11:11.814320+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/.zz-db-sync/configuration"
+INFO 2021-06-13T21:11:11.816595+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-13T21:11:11.816640+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-13T21:11:11.816677+08:00 rocket::rocket 411 - port: [1;49;39m9886[0m
+INFO 2021-06-13T21:11:11.816710+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-13T21:11:11.816762+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-13T21:11:11.816792+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-13T21:11:11.816823+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-13T21:11:11.816857+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-13T21:11:11.816889+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-13T21:11:11.816920+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-13T21:11:11.816950+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-13T21:11:11.817060+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-13T21:11:11.817160+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-13T21:11:11.817222+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T21:11:11.817294+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-13T21:11:11.817354+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/do-synchronization[0m [36m([0m[35mdo_synchronization[0m[36m)[0m
+INFO 2021-06-13T21:11:11.817419+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-13T21:11:11.817479+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/setting[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-13T21:11:11.818083+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:9886[0m
+INFO 2021-06-13T21:11:25.393936+08:00 rocket::rocket 208 - [32mGET[0m [34m/[0m [33mtext/html[0m:
+INFO 2021-06-13T21:11:25.394421+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-13T21:11:25.394698+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T21:11:25.396239+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T21:11:25.439084+08:00 rocket::rocket 208 - [32mGET[0m [34m/static/css/main.31c5b48e.chunk.css[0m [33mtext/css[0m:
+INFO 2021-06-13T21:11:25.439569+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T21:11:25.439945+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T21:11:25.441304+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T21:11:25.449722+08:00 rocket::rocket 208 - [32mGET[0m [34m/static/js/main.3c8c066e.chunk.js[0m:
+INFO 2021-06-13T21:11:25.450357+08:00 rocket::rocket 208 - [32mGET[0m [34m/static/js/2.852e0a72.chunk.js[0m:
+INFO 2021-06-13T21:11:25.450551+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T21:11:25.450930+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T21:11:25.451310+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T21:11:25.455053+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T21:11:25.458756+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T21:11:25.459538+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T21:11:25.468945+08:00 rocket::rocket 208 - [32mGET[0m [34m/static/media/logo.6ce24c58.svg[0m [33mimage/avif[0m:
+INFO 2021-06-13T21:11:25.469575+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T21:11:25.470878+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T21:11:25.471533+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T21:11:25.498175+08:00 rocket::rocket 208 - [32mGET[0m [34m/manifest.json[0m:
+INFO 2021-06-13T21:11:25.498502+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T21:11:25.498837+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T21:11:25.500647+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T21:11:25.500776+08:00 rocket::rocket 208 - [32mGET[0m [34m/favicon.ico[0m [33mimage/avif[0m:
+INFO 2021-06-13T21:11:25.501146+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T21:11:25.501661+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T21:11:25.502524+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T21:11:25.504558+08:00 rocket::rocket 208 - [32mGET[0m [34m/logo192.png[0m [33mimage/avif[0m:
+INFO 2021-06-13T21:11:25.504980+08:00 rocket::rocket 295 - Matched: [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T21:11:25.505278+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-06-13T21:11:25.506030+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-13T21:12:09.154693+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/Users/herbluo/.zz-db-sync/configuration"
+INFO 2021-06-13T21:12:09.157034+08:00 rocket::rocket 409 - 🔧 Configured for development.
+INFO 2021-06-13T21:12:09.157088+08:00 rocket::rocket 410 - address: [1;49;39mlocalhost[0m
+INFO 2021-06-13T21:12:09.157125+08:00 rocket::rocket 411 - port: [1;49;39m9886[0m
+INFO 2021-06-13T21:12:09.157160+08:00 rocket::rocket 412 - log: [1;49;39mnormal[0m
+INFO 2021-06-13T21:12:09.157195+08:00 rocket::rocket 413 - workers: [1;49;39m16[0m
+INFO 2021-06-13T21:12:09.157228+08:00 rocket::rocket 414 - secret key: [1;49;39mgenerated[0m
+INFO 2021-06-13T21:12:09.157261+08:00 rocket::rocket 415 - limits: [1;49;39mforms = 32KiB[0m
+INFO 2021-06-13T21:12:09.157299+08:00 rocket::rocket 423 - keep-alive: [1;49;39m5s[0m
+INFO 2021-06-13T21:12:09.157333+08:00 rocket::rocket 423 - read timeout: [1;49;39m5s[0m
+INFO 2021-06-13T21:12:09.157365+08:00 rocket::rocket 423 - write timeout: [1;49;39m5s[0m
+INFO 2021-06-13T21:12:09.157398+08:00 rocket::rocket 437 - tls: [1;49;39mdisabled[0m
+INFO 2021-06-13T21:12:09.157509+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/[0m[35m:[0m
+INFO 2021-06-13T21:12:09.157611+08:00 rocket::rocket 540 - [32mGET[0m [34m/[0m [[1;49;39m10[0m]
+INFO 2021-06-13T21:12:09.157674+08:00 rocket::rocket 540 - [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+INFO 2021-06-13T21:12:09.157745+08:00 rocket::rocket 516 - 🛰  [35mMounting[0m [34m/api[0m[35m:[0m
+INFO 2021-06-13T21:12:09.157806+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/do-synchronization[0m [36m([0m[35mdo_synchronization[0m[36m)[0m
+INFO 2021-06-13T21:12:09.157870+08:00 rocket::rocket 540 - [32mGET[0m [34m/api/setting[0m [36m([0m[35mget_settings[0m[36m)[0m
+INFO 2021-06-13T21:12:09.157934+08:00 rocket::rocket 540 - [32mPOST[0m [34m/api/setting[0m [36m([0m[35msave_settings[0m[36m)[0m
+INFO 2021-06-13T21:12:09.158331+08:00 rocket::rocket 741 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://[0m[1;4;49;39mlocalhost:9886[0m
