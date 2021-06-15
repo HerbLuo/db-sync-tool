@@ -1,7 +1,7 @@
 import { Collapse, createStyles, List, ListItem, ListItemIcon, ListItemText, makeStyles, Theme } from "@material-ui/core";
 import { PropsWithChildren, ReactElement } from "react";
 import HomeIcon from '@material-ui/icons/Home';
-import { getAll } from "./api/settings";
+import { configurationApi } from "./api/configuration";
 import { HideNav } from "./utils/ResponsiveFrameView";
 import { usePromise } from "./utils/use-async";
 import { useSwitch } from "./utils/use-switch";
@@ -41,13 +41,13 @@ function NestedListItem(props: PropsWithChildren<NestedListItemProps>) {
 export function Drawer(prop: { hideNav: HideNav }) {
   const { hideNav } = prop;
   const classes = useStyles();
-  const [projects] = usePromise(getAll());
+  const [configuration] = usePromise(configurationApi.get());
 
   return (
     <List component="div">
       <NestedListItem defaultExpand text="项目" icon={<HomeIcon/>}>
         <CurrentSyncConfigContext.Consumer>
-          {([, setContext]) => (projects || []).map(project => (
+          {([, setContext]) => configuration?.projects.map(project => (
             <ListItem 
               key={project.name}
               component={Link}

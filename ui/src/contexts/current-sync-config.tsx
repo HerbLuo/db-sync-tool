@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { SyncConfig } from "../types/sync-config";
+import { SyncConfig } from "../types/configuration";
 import { Context, defaultContext } from "./context";
 
 export type CurrentSyncConfigContextType = Context<SyncConfig | null>;

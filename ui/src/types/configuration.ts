@@ -15,3 +15,14 @@ export interface SyncConfig {
   buffer_size?: number;
   skip_sync_if_table_not_exist?: boolean;
 }
+
+export interface Project {
+  name: string;
+  def?: boolean;
+  syncs: SyncConfig[];
+}
+
+export interface Configuration {
+  databaseAddresses: ClientAddr[];
+  projects: Project[];
+}

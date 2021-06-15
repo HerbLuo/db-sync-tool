@@ -1,4 +1,4 @@
-import { ClientAddr } from "../types/sync-config";
+import { ClientAddr } from "../types/configuration";
 
 export function formatAddr(addr: string | ClientAddr): ClientAddr {
   if (typeof addr === "string") {

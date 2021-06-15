@@ -20,10 +20,12 @@ const makeSender = (method: string) => async <T>(url: string, body = {}): Promis
     throw makeHttpError(response.status, json.data);
 }
 
-export const baseUrl = "/";
+export const baseUrl = "";
 
-export const get = makeSender("GET");
-export const post = makeSender("POST");
-export const put = makeSender("PUT");
-export const patch = makeSender("PATCH");
-export const del = makeSender("DELETE");
+export const http = {
+  get: makeSender("GET"),
+  post: makeSender("POST"),
+  put: makeSender("PUT"),
+  patch: makeSender("PATCH"),
+  del: makeSender("DELETE"),
+}
