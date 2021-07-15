@@ -984,3 +984,398 @@ INFO 2021-06-13T22:22:24.489711+08:00 rocket::rocket 120 - [32mResponse succeed
 INFO 2021-06-13T22:22:24.489835+08:00 rocket::rocket 303 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
 INFO 2021-06-13T22:22:24.490122+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
 INFO 2021-06-13T22:22:24.492265+08:00 rocket::rocket 120 - [32mResponse succeeded.[0m
+INFO 2021-06-20T02:11:49.464017498+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/home/herbluo/.zz-db-sync/configuration"
+INFO 2021-06-30T21:52:08.689189141+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/home/herbluo/.zz-db-sync/configuration"
+INFO 2021-07-08T22:30:29.811328153+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/home/herbluo/.zz-db-sync/configuration"
+INFO 2021-07-08T22:31:40.573412464+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/home/herbluo/.zz-db-sync/configuration"
+ERROR 2021-07-13T00:01:29.832938990+08:00 rocket::fs::server 149 - FileServer path '[37m/home/herbluo/Project/@cloudself/db-sync-tool/ui/build[0m' is not a directory.
+WARN 2021-07-13T00:01:29.833052351+08:00 rocket::fs::server 150 - Aborting early to prevent inevitable handler failure.
+WARN 2021-07-13T00:02:48.539631455+08:00 rocket::config::config 309 - 🔧 Configured for debug.
+WARN 2021-07-13T00:02:48.539732445+08:00 rocket::config::config 311 - address: [1;49;39m0.0.0.0[0m
+WARN 2021-07-13T00:02:48.539791468+08:00 rocket::config::config 312 - port: [1;49;39m9886[0m
+WARN 2021-07-13T00:02:48.539845961+08:00 rocket::config::config 313 - workers: [1;49;39m12[0m
+WARN 2021-07-13T00:02:48.539898169+08:00 rocket::config::config 314 - ident: [1;49;39mRocket[0m
+WARN 2021-07-13T00:02:48.539950381+08:00 rocket::config::config 318 - keep-alive: [1;49;39m5s[0m
+WARN 2021-07-13T00:02:48.540010478+08:00 rocket::config::config 323 - limits: [1;49;39mbytes = 8KiB, data-form = 2MiB, file = 1MiB, form = 32KiB, json = 1MiB, msgpack = 1MiB, string = 8KiB[0m
+WARN 2021-07-13T00:02:48.540120798+08:00 rocket::config::config 326 - tls: [1;49;39mdisabled[0m
+WARN 2021-07-13T00:02:48.540176676+08:00 rocket::config::config 338 - temp dir: [1;49;39m/tmp[0m
+WARN 2021-07-13T00:02:48.540228009+08:00 rocket::config::config 339 - log level: [1;49;39mnormal[0m
+WARN 2021-07-13T00:02:48.540278243+08:00 rocket::config::config 340 - cli colors: [1;49;39mtrue[0m
+WARN 2021-07-13T00:02:48.540333541+08:00 rocket::config::config 341 - shutdown: [1;49;39mctrlc = true, force = true, signals = [SIGTERM], grace = 2s, mercy = 3s[0m
+WARN 2021-07-13T00:02:48.540546163+08:00 rocket::config::config 360 - found set deprecated profile `[37mproduction[0m`
+WARN 2021-07-13T00:02:48.540612951+08:00 rocket::config::config 363 - profile was replaced by `[37mrelease[0m`
+WARN 2021-07-13T00:02:48.540685022+08:00 rocket::rocket 534 - 🛰  [35mRoutes[0m:
+WARN 2021-07-13T00:02:48.540818018+08:00 rocket::rocket 541 - [36m([0m[37mFileServer: ui/build/[0m[36m)[0m [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+WARN 2021-07-13T00:02:48.540932763+08:00 rocket::rocket 541 - [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+WARN 2021-07-13T00:02:48.541045161+08:00 rocket::rocket 541 - [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+WARN 2021-07-13T00:02:48.541148701+08:00 rocket::rocket 541 - [36m([0m[37mdo_synchronization[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/do-synchronization[0m
+WARN 2021-07-13T00:02:48.541274338+08:00 rocket::fairing::fairings 166 - 📡 [35mFairings[0m:
+WARN 2021-07-13T00:02:48.541341107+08:00 rocket::fairing::fairings 169 - [1;49;39mShield[0m ([1;34mliftoff, response, singleton[0m)
+WARN 2021-07-13T00:05:33.644201710+08:00 rocket::config::config 309 - 🔧 Configured for debug.
+WARN 2021-07-13T00:05:33.644312201+08:00 rocket::config::config 311 - address: [1;49;39m0.0.0.0[0m
+WARN 2021-07-13T00:05:33.644401269+08:00 rocket::config::config 312 - port: [1;49;39m9886[0m
+WARN 2021-07-13T00:05:33.644485987+08:00 rocket::config::config 313 - workers: [1;49;39m12[0m
+WARN 2021-07-13T00:05:33.644569232+08:00 rocket::config::config 314 - ident: [1;49;39mRocket[0m
+WARN 2021-07-13T00:05:33.644666621+08:00 rocket::config::config 318 - keep-alive: [1;49;39m5s[0m
+WARN 2021-07-13T00:05:33.644748890+08:00 rocket::config::config 323 - limits: [1;49;39mbytes = 8KiB, data-form = 2MiB, file = 1MiB, form = 32KiB, json = 1MiB, msgpack = 1MiB, string = 8KiB[0m
+WARN 2021-07-13T00:05:33.644902700+08:00 rocket::config::config 326 - tls: [1;49;39mdisabled[0m
+WARN 2021-07-13T00:05:33.645000502+08:00 rocket::config::config 338 - temp dir: [1;49;39m/tmp[0m
+WARN 2021-07-13T00:05:33.645097182+08:00 rocket::config::config 339 - log level: [1;49;39mnormal[0m
+WARN 2021-07-13T00:05:33.645199636+08:00 rocket::config::config 340 - cli colors: [1;49;39mtrue[0m
+WARN 2021-07-13T00:05:33.645299548+08:00 rocket::config::config 341 - shutdown: [1;49;39mctrlc = true, force = true, signals = [SIGTERM], grace = 2s, mercy = 3s[0m
+WARN 2021-07-13T00:05:33.645577699+08:00 rocket::config::config 360 - found set deprecated profile `[37mproduction[0m`
+WARN 2021-07-13T00:05:33.645664908+08:00 rocket::config::config 363 - profile was replaced by `[37mrelease[0m`
+WARN 2021-07-13T00:05:33.645775119+08:00 rocket::rocket 534 - 🛰  [35mRoutes[0m:
+WARN 2021-07-13T00:05:33.645953599+08:00 rocket::rocket 541 - [36m([0m[37mFileServer: ui/build/[0m[36m)[0m [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+WARN 2021-07-13T00:05:33.646106735+08:00 rocket::rocket 541 - [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+WARN 2021-07-13T00:05:33.646255693+08:00 rocket::rocket 541 - [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+WARN 2021-07-13T00:05:33.646402303+08:00 rocket::rocket 541 - [36m([0m[37mdo_synchronization[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/do-synchronization[0m
+WARN 2021-07-13T00:05:33.646580923+08:00 rocket::fairing::fairings 166 - 📡 [35mFairings[0m:
+WARN 2021-07-13T00:05:33.646677884+08:00 rocket::fairing::fairings 169 - [1;49;39mShield[0m ([1;34mliftoff, response, singleton[0m)
+WARN 2021-07-13T00:20:51.692256029+08:00 rocket::config::config 309 - 🔧 Configured for debug.
+WARN 2021-07-13T00:20:51.692361154+08:00 rocket::config::config 311 - address: [1;49;39m0.0.0.0[0m
+WARN 2021-07-13T00:20:51.692419811+08:00 rocket::config::config 312 - port: [1;49;39m9886[0m
+WARN 2021-07-13T00:20:51.692471952+08:00 rocket::config::config 313 - workers: [1;49;39m12[0m
+WARN 2021-07-13T00:20:51.692528813+08:00 rocket::config::config 314 - ident: [1;49;39mRocket[0m
+WARN 2021-07-13T00:20:51.692588100+08:00 rocket::config::config 318 - keep-alive: [1;49;39m5s[0m
+WARN 2021-07-13T00:20:51.692640513+08:00 rocket::config::config 323 - limits: [1;49;39mbytes = 8KiB, data-form = 2MiB, file = 1MiB, form = 32KiB, json = 1MiB, msgpack = 1MiB, string = 8KiB[0m
+WARN 2021-07-13T00:20:51.692726659+08:00 rocket::config::config 326 - tls: [1;49;39mdisabled[0m
+WARN 2021-07-13T00:20:51.692779597+08:00 rocket::config::config 338 - temp dir: [1;49;39m/tmp[0m
+WARN 2021-07-13T00:20:51.692831106+08:00 rocket::config::config 339 - log level: [1;49;39mnormal[0m
+WARN 2021-07-13T00:20:51.692892091+08:00 rocket::config::config 340 - cli colors: [1;49;39mtrue[0m
+WARN 2021-07-13T00:20:51.692952208+08:00 rocket::config::config 341 - shutdown: [1;49;39mctrlc = true, force = true, signals = [SIGTERM], grace = 2s, mercy = 3s[0m
+WARN 2021-07-13T00:20:51.693140493+08:00 rocket::config::config 360 - found set deprecated profile `[37mproduction[0m`
+WARN 2021-07-13T00:20:51.693204665+08:00 rocket::config::config 363 - profile was replaced by `[37mrelease[0m`
+WARN 2021-07-13T00:20:51.693270786+08:00 rocket::rocket 534 - 🛰  [35mRoutes[0m:
+WARN 2021-07-13T00:20:51.693391073+08:00 rocket::rocket 541 - [36m([0m[37mFileServer: ui/build/[0m[36m)[0m [32mGET[0m [34m/<path..>[0m [[1;49;39m10[0m]
+WARN 2021-07-13T00:20:51.693482375+08:00 rocket::rocket 541 - [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+WARN 2021-07-13T00:20:51.693563266+08:00 rocket::rocket 541 - [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+WARN 2021-07-13T00:20:51.693657952+08:00 rocket::rocket 541 - [36m([0m[37mdo_synchronization[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/do-synchronization[0m
+WARN 2021-07-13T00:20:51.693775982+08:00 rocket::fairing::fairings 166 - 📡 [35mFairings[0m:
+WARN 2021-07-13T00:20:51.693843483+08:00 rocket::fairing::fairings 169 - [1;49;39mShield[0m ([1;34mliftoff, response, singleton[0m)
+INFO 2021-07-13T00:20:51.694055068+08:00 rocket::shield::shield 210 - 🛡️ [35mShield[0m:
+INFO 2021-07-13T00:20:51.694116321+08:00 rocket::shield::shield 213 - Permissions-Policy: [49;39minterest-cohort=()[0m
+INFO 2021-07-13T00:20:51.694168714+08:00 rocket::shield::shield 213 - X-Frame-Options: [49;39mSAMEORIGIN[0m
+INFO 2021-07-13T00:20:51.694220896+08:00 rocket::shield::shield 213 - X-Content-Type-Options: [49;39mnosniff[0m
+WARN 2021-07-13T00:20:51.694308313+08:00 rocket::rocket 624 - 🚀 [1;49;39mRocket has launched from[0m [1;4;49;39mhttp://0.0.0.0:9886[0m
+INFO 2021-07-13T00:21:28.862206640+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:21:28.862468243+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:21:28.862648601+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:28.862832429+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:28.863050539+08:00 db_sync_tool::helper::config_store 26 - 当前的配置文件路径为 "/home/herbluo/.zz-db-sync/configuration"
+ERROR 2021-07-13T00:21:28.863410215+08:00 db_sync_tool::helper::resp 36 - ebab28afef3d4e8ab87db22b7b9d6f75:32768:IoError("配置文件读取失败 Os { code: 2, kind: NotFound, message: \"No such file or directory\" }")
+ERROR 2021-07-13T00:21:28.863537639+08:00 db_sync_tool::helper::resp 36 - 5901f755ace74120877af48fde58aa8c:32768:IoError("配置文件读取失败 Os { code: 2, kind: NotFound, message: \"No such file or directory\" }")
+INFO 2021-07-13T00:21:28.863715178+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:28.863804554+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:28.864141949+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:28.864204945+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:28.871366827+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:21:28.871572534+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:21:28.871721738+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:28.871881692+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+ERROR 2021-07-13T00:21:28.872007735+08:00 db_sync_tool::helper::resp 36 - e71e836d08ba4dcbafe2c42030173963:32768:IoError("配置文件读取失败 Os { code: 2, kind: NotFound, message: \"No such file or directory\" }")
+ERROR 2021-07-13T00:21:28.872138466+08:00 db_sync_tool::helper::resp 36 - 6b332a0090a941f092a64ede276ccfbe:32768:IoError("配置文件读取失败 Os { code: 2, kind: NotFound, message: \"No such file or directory\" }")
+INFO 2021-07-13T00:21:28.872243158+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:28.872345667+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:28.872538940+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:28.872647890+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:28.882340449+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:21:28.882415307+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:21:28.882544442+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:28.882612813+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:28.882838500+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:28.882937767+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:28.883081930+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:28.883197253+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:28.886481882+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:21:28.886590670+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:21:28.886675277+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:28.886829604+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:28.896870202+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:28.896938183+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:28.897168624+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:28.897222951+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:37.772944617+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:21:37.773313071+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:21:37.773489465+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:21:37.773754625+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:21:37.774008476+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:37.774108293+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:37.774209706+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:37.774328193+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:37.774401741+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:37.774518605+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:37.774660911+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:37.774927611+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:37.774987403+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:37.775221744+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:37.775435502+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:37.775634364+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:37.782254691+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:21:37.782514652+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:37.782919222+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:37.783225643+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:37.785072039+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:21:37.785199342+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:21:37.785317508+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:21:37.785399103+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:37.785489680+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:37.785636875+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:37.796806314+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:37.796893599+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:37.797041237+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:37.797086589+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:37.797175729+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:37.797283406+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:38.239772173+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:21:38.240438389+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:21:38.241175421+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:38.241850298+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:38.242392535+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:38.243076866+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:38.243836373+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:38.244638049+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:38.250812959+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:21:38.251064609+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:38.251313575+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:38.251668867+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:38.251830466+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:21:38.252076491+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:38.252291514+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:38.252565371+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:39.977767536+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:21:39.977924716+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:21:39.978051824+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:21:39.978146456+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:21:39.978253664+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:39.978361739+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:39.978474644+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:39.978573551+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:21:39.978897057+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:39.979607111+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:39.993225011+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:39.993452231+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:39.993624363+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:21:39.994387866+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:39.994614624+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:21:39.994841016+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:12.839678223+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:22:12.840347071+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:22:12.841047077+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:12.841682024+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:12.842319953+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:12.842619245+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:12.842861485+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:12.842936921+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:12.849527941+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:22:12.849668727+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:22:12.849825535+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:12.849974794+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:12.850103500+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:12.850215887+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:12.850470976+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:12.850577606+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:12.861475730+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:22:12.861580379+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:22:12.861745525+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:12.861835110+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:12.862072074+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:12.862328072+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:12.864281237+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:22:12.864469361+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:12.875951809+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:12.876005854+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:12.876093866+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:22:12.876223550+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:12.876259897+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:12.876340227+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:12.876536984+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:12.876775873+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:16.471972757+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:22:16.472205548+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:22:16.472443431+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:22:16.472651097+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:22:16.472825208+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:16.473022237+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:16.473181288+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:16.473305691+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:16.473396544+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:16.473480669+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:16.473564963+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:16.473693734+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:16.473970745+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:16.474137426+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:16.474219520+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:16.474309860+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:16.490555715+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:22:16.490841085+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:22:16.491340289+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:22:16.491668664+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:22:16.491948796+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:16.492254114+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:16.492516539+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:16.492774123+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:16.493542099+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:16.494711144+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:16.507742222+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:16.507995852+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:16.508289661+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:16.509032191+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:16.509315163+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:16.509538463+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:17.041980802+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:22:17.042182714+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:22:17.042323663+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:17.042373320+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:17.042512011+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:17.042653040+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:17.042885315+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:17.042933758+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:17.060779601+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:22:17.061310529+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:22:17.061735562+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:17.062224782+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:17.062624878+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:17.062984818+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:17.063676087+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:17.063915987+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:18.048934709+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:22:18.049314249+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:18.049514047+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:22:18.049786039+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:22:18.049951432+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:18.050088471+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:22:18.050227124+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:18.050350605+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:18.050538542+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:18.051164626+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:18.053086415+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:18.053148884+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:18.053264979+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:18.053438730+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:18.053515679+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:18.053617249+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:35.193913177+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:22:35.194128573+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:22:35.194301170+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:22:35.194488058+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:35.194629314+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:35.194733922+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:22:35.194938180+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:35.195067339+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:35.195144962+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:35.195252374+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:35.195353483+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:35.195533100+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:35.195598194+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:35.195673545+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:35.196032988+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:35.196163035+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:35.202575018+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:22:35.202914417+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:35.203392732+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:35.203785790+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:35.206122595+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:22:35.206397182+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:35.207159065+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:22:35.207365006+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:22:35.207468934+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:35.207566019+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:35.217190053+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:35.217292832+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:35.217381816+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:35.217479756+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:35.217552389+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:35.217674522+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:35.483062417+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:22:35.483808066+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:22:35.484554913+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:22:35.485177776+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T00:22:35.485798416+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:35.486149273+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:35.486512641+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:35.486928039+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:35.487219414+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:35.487483979+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:35.487920914+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:35.488879718+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:35.489124844+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:35.489412734+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:35.490166905+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:35.490487123+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:36.269128648+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:22:36.269277958+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:22:36.269400679+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:22:36.269488157+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T00:22:36.269587236+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:36.269700731+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:36.269799261+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:36.269885386+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T00:22:36.270136242+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:36.270676531+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:36.284799800+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:36.285131181+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:36.285414293+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T00:22:36.286187282+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:36.286696199+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T00:22:36.287020763+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T17:16:34.137468808+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T17:16:34.138768008+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T17:16:34.139992841+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T17:16:34.141567934+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T17:16:34.203195737+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T17:16:34.204473898+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T17:16:34.205678082+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T17:16:34.207230743+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T17:16:34.257611788+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T17:16:34.259033038+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T17:16:34.260350813+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T17:16:34.262176053+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T17:16:34.301415545+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T17:16:34.301664056+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T17:16:34.302037639+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T17:16:34.302345479+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T17:16:34.314578231+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T17:16:34.315475060+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T17:16:34.316975998+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T17:16:34.318280565+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T17:16:34.332780951+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T17:16:34.333882975+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T17:16:34.334893996+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T17:16:34.336174497+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T17:16:34.358821851+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T17:16:34.359763219+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T17:16:34.361418517+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T17:16:34.362712950+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T17:16:34.415810860+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T17:16:34.416762497+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T17:16:34.418330189+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T17:16:34.419652072+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T17:16:47.489729399+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T17:16:47.491222381+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T17:16:47.492514649+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T17:16:47.493610331+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T17:16:47.531276751+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T17:16:47.531989835+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T17:16:47.532774473+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T17:16:47.533952910+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T17:16:47.582331175+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T17:16:47.583610744+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T17:16:47.584818381+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T17:16:47.586390176+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T17:16:47.617397285+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T17:16:47.618406075+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T17:16:47.619845286+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T17:16:47.620540864+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T17:16:47.632911316+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T17:16:47.633708191+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T17:16:47.634865736+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T17:16:47.635793960+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T17:16:47.652405780+08:00 rocket::server 203 - [32mGET[0m [34m/api/setting[0m:
+INFO 2021-07-13T17:16:47.653407630+08:00 rocket::server 276 - Matched: [36m([0m[37mget_settings[0m[36m)[0m [32mGET[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T17:16:47.654191035+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T17:16:47.655153095+08:00 rocket::server 113 - [32mResponse succeeded.[0m
+INFO 2021-07-13T17:16:47.669566507+08:00 rocket::server 203 - [32mPOST[0m [34m/api/setting[0m [33mtext[0m[33m/[0m[33mplain[0m:
+INFO 2021-07-13T17:16:47.670322387+08:00 rocket::server 276 - Matched: [36m([0m[37msave_settings[0m[36m)[0m [32mPOST[0m [4;34m/api[0m[34m/setting[0m
+INFO 2021-07-13T17:16:47.671529796+08:00 rocket::server 286 - [1;49;39mOutcome:[0m [49;32mSuccess[0m
+INFO 2021-07-13T17:16:47.672477912+08:00 rocket::server 113 - [32mResponse succeeded.[0m

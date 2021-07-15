@@ -1,6 +1,6 @@
 macro_rules! success {
     ($data:expr) => {
-        rocket_contrib::json::Json(crate::helper::resp::Data {
+        rocket::serde::json::Json(crate::helper::resp::Data {
             ok: 1,
             data: $data,
         })
@@ -15,7 +15,7 @@ macro_rules! fail {
         log::error!("{}:{}:{:?}", serial, $code.code, $debug);
         crate::helper::resp::WithStatus (
             $code.status,
-            rocket_contrib::json::Json(crate::helper::resp::Data {
+            rocket::serde::json::Json(crate::helper::resp::Data {
                 ok: 0,
                 data: crate::helper::resp::HttpError {
                     code: $code.code,

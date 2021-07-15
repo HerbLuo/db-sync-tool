@@ -1,7 +1,6 @@
-use rocket_contrib::json::Json;
-use serde::Serialize;
+use rocket::serde::{Serialize, json::Json};
 use rocket::http::Status;
-use rocket::response::{Responder, Response};
+use rocket::response::{self, Responder, Response};
 use rocket::request::Request;
 
 use crate::types::ZzErrors;
@@ -23,17 +22,18 @@ pub struct HttpError {
 #[derive(Debug, Clone, PartialEq)]
 pub struct WithStatus<R>(pub Status, pub R);
 
-impl<'r, R: Responder<'r>> Responder<'r> for WithStatus<R> {
-    fn respond_to(self, req: &Request) -> Result<Response<'r>, Status> {
-        Response::build_from(self.1.respond_to(req)?)
+impl<'r, R: Responder<'r, 'static>> Responder<'r, 'static> for WithStatus<R> {
+    fn respond_to(self, request: &'r Request<'_>) -> response::Result<'static> {
+        Response::build_from(self.1.respond_to(request)?)
             .status(self.0)
             .ok()
     }
 }
 
-impl<'r> Responder<'r> for ZzErrors {
-    fn respond_to(self, req: &Request) -> Result<Response<'r>, Status> {
-        Response::build_from(fail!(crate::ec::ServerError, self).respond_to(req)?)
+
+impl<'r> Responder<'r, 'static> for ZzErrors {
+    fn respond_to(self, request: &'r Request<'_>) -> response::Result<'static> {
+        Response::build_from(fail!(crate::ec::ServerError, self).respond_to(request)?)
             .status(Status::InternalServerError)
             .ok()
     }
