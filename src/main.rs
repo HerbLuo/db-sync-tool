@@ -21,5 +21,7 @@ async fn main() {
 
     futures::executor::block_on(rocket_server::start());
 
-    ui::start_tray();
+    if let Err(e) = ui::start_tray() {
+        warn!("gui init failed, {:?}", e);
+    }
 }

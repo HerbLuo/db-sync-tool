@@ -1,6 +1,6 @@
-use crate::{helper::{resp::{ZzJsonResult}, run_sync}, types::{SyncConfig, ZzErrors}};
-use futures::{executor::block_on};
-use std::{future::Future};
+use crate::{helper::{resp::ZzJsonResult, run_sync}, types::{SyncConfig, ZzErrors}};
+use futures::executor::block_on;
+use std::future::Future;
 use rocket::{fs::FileServer, serde::json::Json};
 use crate::helper::config_store::{ConfigStore, FileConfigStore};
 

@@ -6,6 +6,7 @@ pub enum ZzErrors {
     IoError(String),
     ConnectError(String),
     ExecSqlError(String),
+    GuiError(String),
 }
 
 #[derive(Serialize, Deserialize, Debug)]
