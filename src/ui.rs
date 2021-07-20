@@ -16,12 +16,16 @@ pub fn start_tray() -> Result<(), ZzErrors> {
 }
 
 #[cfg(target_os = "macos")]
-pub fn start_tray() {
-    let mut tray = TrayItem::new("数据库同步工具", "").unwrap();
-    tray.add_menu_item("打开主界面", || {
+pub fn start_tray() -> Result<impl FnOnce(), ZzErrors> {
+    use std::{cell::RefCell, rc::Rc};
+
+    let mut tray = TrayItem::new("数据库同步工具", "").map_err(|e| ZzErrors::GuiError(format!("初始化tray失败{}", e)))?;
+
+    tray.inner_mut().add_menu_item("打开主界面", || {
         webbrowser::open("http://localhost:9886").unwrap();
     }).unwrap();
-    let inner = tray.inner_mut();
-    inner.add_quit_item("退出");
-    inner.display();
+    tray.inner_mut().add_quit_item("退出");
+
+    let tray_ref_cell = Rc::new(RefCell::new(tray));
+    Ok(move || (*tray_ref_cell).borrow_mut().inner_mut().display())
 }

@@ -13,15 +13,19 @@ mod ui;
 mod rocket_server;
 
 use helper::resp_error_code as ec;
-use futures;
 
 #[tokio::main]
 async fn main() {
     helper::log::init();
 
-    futures::executor::block_on(rocket_server::start());
-
-    if let Err(e) = ui::start_tray() {
-        warn!("gui init failed, {:?}", e);
+    match ui::start_tray() {
+        Ok(call) => {
+            tokio::spawn(rocket_server::start());
+            call();
+        },
+        Err(e) => {
+            warn!("gui init failed, {:?}", e);
+            rocket_server::start().await;
+        },
     }
 }
