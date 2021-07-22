@@ -1,8 +1,15 @@
-use crate::{helper::{resp::ZzJsonResult, run_sync}, types::{SyncConfig, ZzErrors}};
+use crate::{
+    helper::{
+        resp::ZzJsonResult, 
+        run_sync, 
+        arguments::MATCHES, 
+        config_store::{ConfigStore, FileConfigStore}
+    }, 
+    types::{SyncConfig, ZzErrors}
+};
 use futures::executor::block_on;
 use std::future::Future;
 use rocket::{fs::FileServer, serde::json::Json};
-use crate::helper::config_store::{ConfigStore, FileConfigStore};
 
 fn to_resp<T>(res_fut: impl Future<Output=Result<T, ZzErrors>>) -> ZzJsonResult<T> {
     block_on(res_fut).map(|o| success!(o))
@@ -29,7 +36,18 @@ fn do_synchronization(sync_config: Json<SyncConfig>) -> ZzJsonResult<()> {
 }
 
 pub async fn start() {
-    rocket::build() 
+    let (port, address) = MATCHES.with(|matches| {
+        (
+            matches.value_of("PORT").unwrap().to_string().parse::<usize>().unwrap(),
+            matches.value_of("ADDRESS").unwrap().to_string(),
+        )
+    });
+    
+    let figment = rocket::Config::figment()
+        .merge(("port", port))
+        .merge(("address", address));
+
+    rocket::custom(figment)
         .mount("/", FileServer::from(concat!(env!("CARGO_MANIFEST_DIR"), "/ui/build")))
         .mount("/api", routes![
             do_synchronization,

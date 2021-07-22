@@ -12,16 +12,21 @@ mod types;
 mod ui;
 mod rocket_server;
 
-use helper::resp_error_code as ec;
+use helper::{arguments, resp_error_code as ec};
 
 #[tokio::main]
 async fn main() {
     helper::log::init();
+    arguments::init();
+
+    ctrlc::set_handler(move || {
+        std::process::exit(0); 
+    }).unwrap();
 
     match ui::start_tray() {
-        Ok(call) => {
+        Ok(open_tray) => {
             tokio::spawn(rocket_server::start());
-            call();
+            open_tray();
         },
         Err(e) => {
             warn!("gui init failed, {:?}", e);

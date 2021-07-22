@@ -5,6 +5,7 @@ pub mod resp_error_code;
 pub mod log;
 pub mod dirs;
 pub mod config_store;
+pub mod arguments;
 
 mod misc;
 pub use misc::*;
