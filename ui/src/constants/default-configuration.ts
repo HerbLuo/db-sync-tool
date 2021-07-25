@@ -1,6 +1,15 @@
-import { Configuration } from "../types/configuration";
+import { AppDb } from "../types/app-db";
+import { generate16LengthId } from "../utils/id";
 
-export const defaultConfiguration: Configuration = {
+export const defaultConfiguration: AppDb = {
   databaseAddresses: [],
-  projects: [],
+  current: {
+    id: generate16LengthId(),
+    name: "未命名配置",
+    mode: "drop-create",
+    tables: "*",
+    from: "",
+    to: "",
+  },
+  syncConfigs: [],
 }

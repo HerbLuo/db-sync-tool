@@ -1,12 +1,10 @@
 import { Collapse, createStyles, List, ListItem, ListItemIcon, ListItemText, makeStyles, Theme } from "@material-ui/core";
 import { PropsWithChildren, ReactElement } from "react";
 import HomeIcon from '@material-ui/icons/Home';
-import { configurationApi } from "./api/configuration";
 import { HideNav } from "./utils/ResponsiveFrameView";
-import { usePromise } from "./utils/use-async";
 import { useSwitch } from "./utils/use-switch";
 import { Link } from "react-router-dom";
-import { CurrentSyncConfigContext } from "./contexts/current-sync-config";
+import { AppDbContext } from "./contexts/app-db";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -41,28 +39,27 @@ function NestedListItem(props: PropsWithChildren<NestedListItemProps>) {
 export function Drawer(prop: { hideNav: HideNav }) {
   const { hideNav } = prop;
   const classes = useStyles();
-  const [configuration] = usePromise(configurationApi.get());
 
   return (
     <List component="div">
       <NestedListItem defaultExpand text="项目" icon={<HomeIcon/>}>
-        <CurrentSyncConfigContext.Consumer>
-          {([, setContext]) => configuration?.projects.map(project => (
+        <AppDbContext.Consumer>
+          {({appDb, setCurrent}) => appDb?.syncConfigs.map(syncConfig => (
             <ListItem 
-              key={project.name}
+              key={syncConfig.name}
               component={Link}
               className={classes.nested} 
               button={true} 
-              to={`/project/${project.name}`}
+              to={`/project/${syncConfig.name}`}
               onClick={() => {
-                setContext(project.syncs[0]);
+                setCurrent(syncConfig);
                 hideNav();
               }}
             >
-              <ListItemText primary={project.name}/>
+              <ListItemText primary={syncConfig.name}/>
             </ListItem>
-          )) }
-        </CurrentSyncConfigContext.Consumer>
+          ))}
+        </AppDbContext.Consumer>
       </NestedListItem>
     </List>
   );

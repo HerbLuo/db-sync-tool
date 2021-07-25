@@ -1,22 +1,14 @@
 import React, { memo } from "react";
-import { useParams } from "react-router";
-import { CurrentSyncConfigContext } from "../../contexts/current-sync-config";
 import { SyncConfigEditor } from "./SyncConfigEditor";
-
-interface LinkParams {
-  fragment: string;
-}
+import { AppDbContext } from "../../contexts/app-db";
 
 function ProjectPage() {
-  const { fragment } = useParams<LinkParams>();
-  console.log(fragment);
-
   return (
-    <CurrentSyncConfigContext.Consumer>
-      {([syncConfig, setSyncConfig]) => 
-        syncConfig && (<SyncConfigEditor config={syncConfig} setConfig={setSyncConfig}/>)
+    <AppDbContext.Consumer>
+      {({appDb, setCurrent}) => 
+        appDb && (<SyncConfigEditor config={appDb.current} setConfig={setCurrent}/>)
       }
-    </CurrentSyncConfigContext.Consumer>
+    </AppDbContext.Consumer>
   );
 }
 

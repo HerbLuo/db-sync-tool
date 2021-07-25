@@ -1,4 +1,5 @@
 export interface ClientAddr {
+  id: string;
   hostname: string;
   username: string;
   db: string;
@@ -7,6 +8,7 @@ export interface ClientAddr {
 }
 
 export interface SyncConfig {
+  id: string;
   name?: string;
   mode: "drop-create";
   tables: "*" | string[];
@@ -16,13 +18,8 @@ export interface SyncConfig {
   skip_sync_if_table_not_exist?: boolean;
 }
 
-export interface Project {
-  name: string;
-  def?: boolean;
-  syncs: SyncConfig[];
-}
-
-export interface Configuration {
+export interface AppDb {
   databaseAddresses: ClientAddr[];
-  projects: Project[];
+  current: SyncConfig;
+  syncConfigs: SyncConfig[];
 }

@@ -20,7 +20,7 @@ const SETTING_FILENAME: &str = "configuration";
 impl ConfigStore for FileConfigStore {
     fn new<S: AsRef<str>>(app_name: S) -> Result<FileConfigStore, ZzErrors> {
         let home_dir = dirs::home_dir().ok_or(ZzErrors::IoError("找不到用户文件夹".to_string()))?;
-        let work_dir = home_dir.join(format!(".{}", app_name.as_ref()));
+        let work_dir = home_dir.join(format!(".config/{}", app_name.as_ref()));
         fs::create_dir_all(&work_dir).map_err(|e| ZzErrors::IoError(format!("创建工作文件夹失败 {}", e)))?;
         let filepath = work_dir.join(SETTING_FILENAME);
         log::info!("当前的配置文件路径为 {:?}", filepath);

@@ -1,7 +1,7 @@
 import { createStyles, makeStyles, Theme } from "@material-ui/core";
 import React from "react";
 import { ChangeEvent } from "react";
-import { ClientAddr } from "../../types/configuration";
+import { ClientAddr } from "../../types/app-db";
 import { ZzTextField } from "../../utils/ZzTextField";
 
 const useStyles = makeStyles((theme: Theme) =>

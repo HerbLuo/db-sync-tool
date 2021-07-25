@@ -1,5 +1,4 @@
-import { colors } from "@material-ui/core";
-import { ThemeOptions } from "@material-ui/core/styles/createMuiTheme";
+import { colors, ThemeOptions } from "@material-ui/core";
 
 type Mode = "dark" | "light";
 
@@ -20,7 +19,7 @@ const createPalette = (mode: Mode) => ({
   divider: colors.grey[200]
 });
 
-export const createTheme = (mode: Mode): ThemeOptions => {
+export const myTheme = (mode: Mode): ThemeOptions => {
   const palette = createPalette(mode);
 
   const typography = {
@@ -121,5 +120,6 @@ export const createTheme = (mode: Mode): ThemeOptions => {
       MuiTableRow,
     },
     typography,
+    unstable_strictMode: true,
   }
 };

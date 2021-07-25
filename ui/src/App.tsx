@@ -1,5 +1,5 @@
 import { 
-  createMuiTheme,
+  createTheme,
   MuiThemeProvider,
   useMediaQuery,
 } from "@material-ui/core";
@@ -11,9 +11,11 @@ import {
 import Home from "./pages/home";
 import AsyncPage from "./utils/AsyncPage";
 import ResponsiveFrameView from "./utils/ResponsiveFrameView";
-import { createTheme } from "./theme";
+import { myTheme } from "./theme";
 import { Drawer } from "./Drawer";
-import { CurrentSyncConfigContext, useCurrentSyncConfigContextState } from "./contexts/current-sync-config";
+import { AppDbContext, useAppDbContext } from "./contexts/app-db";
+import { usePromise } from "./utils/use-async";
+import { appDbApi } from "./api/app-db";
 
 // const hours = new Date().getHours();
 // const areNight = hours > 23 || hours < 6;
@@ -25,28 +27,30 @@ export default function App() {
     // || true;
 
   const theme = useMemo(() => {
-    return createMuiTheme(createTheme(prefersDarkMode ? "dark" : "light"));
+    return createTheme(myTheme(prefersDarkMode ? "dark" : "light"));
   }, [prefersDarkMode]);
+
+  const appDb = usePromise(appDbApi.get());
 
   return (
     <MuiThemeProvider theme={theme}>
-      <CurrentSyncConfigContext.Provider value={useCurrentSyncConfigContextState()}>
-        <BrowserRouter>
-          <Switch>
-            {/* <Route exact={true} path="/login" component={LoginPage}/> */}
-            <ResponsiveFrameView
-              drawer={hideNav => <Drawer hideNav={hideNav}/>}
-              title={<div className="zz-text-logo">数据库同步</div>}
-            >
-              <Switch>
-                <Route exact={true} path="/:page/:fragment" component={AsyncPage}/>
-                <Route exact={true} path="/:page" component={AsyncPage}/>
-                <Route component={Home}/>
-              </Switch>
-            </ResponsiveFrameView>
-          </Switch>
-        </BrowserRouter>
-      </CurrentSyncConfigContext.Provider>
+      <AppDbContext.Provider value={useAppDbContext(appDb)}>
+          <BrowserRouter>
+            <Switch>
+              {/* <Route exact={true} path="/login" component={LoginPage}/> */}
+              <ResponsiveFrameView
+                drawer={hideNav => <Drawer hideNav={hideNav}/>}
+                title={<div className="zz-text-logo">数据库同步</div>}
+              >
+                <Switch>
+                  <Route exact={true} path="/:page/:fragment" component={AsyncPage}/>
+                  <Route exact={true} path="/:page" component={AsyncPage}/>
+                  <Route component={Home}/>
+                </Switch>
+              </ResponsiveFrameView>
+            </Switch>
+          </BrowserRouter>
+      </AppDbContext.Provider>
     </MuiThemeProvider>
   );
 }

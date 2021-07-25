@@ -1,8 +1,9 @@
-import { ClientAddr } from "../types/configuration";
+import { ClientAddr } from "../types/app-db";
+import { logger } from "./logger";
 
 export function formatAddr(addr: string | ClientAddr): ClientAddr {
   if (typeof addr === "string") {
-    throw new Error("暂不支持str");
+    logger.warn("暂不支持str");
   }
-  return addr;
+  return {} as any;
 }

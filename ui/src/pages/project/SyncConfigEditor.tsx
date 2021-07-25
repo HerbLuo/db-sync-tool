@@ -1,7 +1,7 @@
 import { createStyles, Grid, makeStyles, TextField, Theme } from "@material-ui/core";
 import React, { ChangeEventHandler } from "react";
 import { useState } from "react";
-import { ClientAddr, SyncConfig } from "../../types/configuration";
+import { ClientAddr, SyncConfig } from "../../types/app-db";
 import { formatAddr } from "../../utils/client-addr-str-to-obj";
 import { TypedKey } from "../../utils/ts-typed-key";
 import { ZzTextField } from "../../utils/ZzTextField";

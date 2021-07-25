@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 
 export function usePromise<T>(promise: Promise<T>) {
-  const [state, setState] = useState<T>();
+  const [state, setState] = useState<T | null>(null);
   // eslint-disable-next-line
   const memoedPromise = useMemo(() => promise, []);
   useEffect(() => {
