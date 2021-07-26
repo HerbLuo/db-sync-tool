@@ -17,17 +17,10 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: "10vh 10vh 0 10vh",
     },
     componentGroup: {
-      // display: "flex",
       padding: "10vh 10vh 0 6vh",
-      // flexDirection: "column",
       '&>*': {
         marginBottom: "10px"
       },
-      '& .MuiInputBase-input': {
-        background: "unset",
-        border: "unset",
-
-      }
     },
     code: {
       '& textarea': {
@@ -94,9 +87,9 @@ export function SyncConfigEditor(props: Props) {
         />
       </Grid>
       <Grid item className={classes.componentGroup} xs={12} sm={6}>
-        <ZzTextField label="模式" value={config.mode} readOnly/>
+        <ZzTextField label="模式" wrap={true} rowGrip={5} value={config.mode} readOnly/>
         <ClientAddrConfig label="源数据库" addr={formatAddr(config.from)} onChange={onAddrChange("from")}/>
-        <ZzTextField label="表" value={config.mode} readOnly/>
+        <ZzTextField label="表" wrap={true} rowGrip={5} value={config.mode} readOnly/>
         <ClientAddrConfig label="目标数据库" addr={formatAddr(config.to)} onChange={onAddrChange("to")}/>
       </Grid>
     </Grid>

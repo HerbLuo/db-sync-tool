@@ -9,6 +9,9 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       padding: "10px",
       border: "1px solid #666",
+      display: "grid",
+      gridTemplateColumns: "max-content max-content",
+      rowGap: "5px"
     },
   }),
 );
@@ -33,6 +36,7 @@ export function ClientAddrConfig(props: Props) {
   return (
     <div className={classes.root}>
       <div>{label}</div>
+      <div></div>
       <ZzTextField label="地址" value={addr.hostname} onChange={onChange("hostname")}/>
       <ZzTextField label="端口" value={addr.port} onChange={onChange("port")}/>
       <ZzTextField label="用户名" value={addr.username} onChange={onChange("username")}/>
